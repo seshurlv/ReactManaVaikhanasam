@@ -2,7 +2,8 @@
     background-color : darkred;
     color: beige;
     border-radius: 1.75em;
-    line-height: 2em
+    line-height: 2em;
+    padding: 10px;
 }
 
 
@@ -26,4 +27,16 @@ th {
     text-align: left;
     background-color: #04AA6D;
     color: white;
+}
+
+.vertical-line {
+    width: 0.5px;
+    background-color: #fff;
+    padding: 1px;
+    height: 250px;
+}
+.doners-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }

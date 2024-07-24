@@ -194,7 +194,7 @@ function ScrollTransparentNavbar() {
                   </DropdownItem>              */}
                 </DropdownMenu>
               </UncontrolledDropdown>
-              {/* <UncontrolledDropdown nav>
+              <UncontrolledDropdown nav>
                 <DropdownToggle
                   caret
                   color="default"
@@ -211,15 +211,15 @@ function ScrollTransparentNavbar() {
                   <p>Download</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
-                  <DropdownItem to="/sections#headers" tag={Link}>
+                  <DropdownItem to="/sections#documents" tag={Link}>
                     <i className="now-ui-icons shopping_box"></i>
                     Documents
                   </DropdownItem>
-                  <DropdownItem to="/sections#features" tag={Link}>
+                  <DropdownItem to="/sections#books" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     Books
                   </DropdownItem>
-                  <DropdownItem to="/sections#features" tag={Link}>
+                  {/* <DropdownItem to="/sections#features" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     Pravachanamulu
                   </DropdownItem> 
@@ -230,9 +230,9 @@ function ScrollTransparentNavbar() {
                   <DropdownItem to="/sections#features" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     Keertanalu
-                  </DropdownItem>
+                  </DropdownItem> */}
                 </DropdownMenu>
-              </UncontrolledDropdown> */}
+              </UncontrolledDropdown>
               <UncontrolledDropdown nav>
                 <DropdownToggle
                   caret

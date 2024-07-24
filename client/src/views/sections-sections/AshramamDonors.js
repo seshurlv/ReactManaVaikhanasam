@@ -2,6 +2,7 @@ import React from "react";
 
 import ReactDataGrid from '@inovua/reactdatagrid-community';
 import '@inovua/reactdatagrid-community/index.css';
+import qrCodeImage from 'assets/QRCode/APSriVaikhanasaMahaMandali_QRScan.jpg';
 
 // reactstrap components
 import {  
@@ -2434,13 +2435,27 @@ function AshramamDonors() {
                 <h4>
                   Following are the list of donors who helped us in realizing dream of building our own “Sri Vaikhanasa Ashramam” at Hyderabad.
                   <br/><br/>
-                  Following are the bank details for donating funds towards Ashramam Development:<br/><br/>
-                  <div className="accountDetails">
-                    <b>Name : </b> AP SRI VAIKHANASA MAHA MANDALI<br/>
-                    <b>Bank Name : </b> Union Bank Of India, Tarnaka Branch, Hyderabad<br/>
-                    <b>A/C No : </b> 057810011018048 <br />
-                    <b>IFSC Code : </b> UBIN0805785<br/>
-                  </div>
+                    Following are the bank details for donating funds towards Ashramam Development 
+                    <br/>or<br/>
+                    now even we can scan the below QR Code to donate as well<br/><br/>
+                  <br/>
+                  <div className="accountDetails doners-container">
+                    <div className="accountDetails">
+                        <b>Name : </b> AP SRI VAIKHANASA MAHA MANDALI<br/>
+                        <b>Bank Name : </b> Union Bank Of India, Tarnaka Branch, Hyderabad<br/>
+                        <b>A/C No : </b> 057810011018048 <br />
+                        <b>IFSC Code : </b> UBIN0805785<br/>
+                    </div>                
+                    <div className="vertical-line"></div> {/* Add this line for vertical line */}
+                    <div className="accountDetails">
+                        <img
+                            alt="..."
+                            className="img img-raised rounded img-blog rellax"
+                            data-rellax-speed="4"
+                            src={qrCodeImage}
+                        />
+                    </div>                
+                  </div>                  
                 </h4>
                 <br/><br/>
                 <ReactDataGrid

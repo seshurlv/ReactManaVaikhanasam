@@ -29,7 +29,7 @@ function PresentationHeader() {
             style={{
               backgroundImage:
                 "url(" +
-                require("assets/siteimg/Sri_Vikhanasa_Maharishi.jpg") +
+                require("assets/siteimg/Sri_Vikhanasa_Maharishi.webp") +
                 ")"
             }}
           ></div>

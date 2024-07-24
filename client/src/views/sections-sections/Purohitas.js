@@ -449,7 +449,7 @@ const gridStyle = { minHeight: 550 };
 // ];
 
 const aparamGridColumns = [
-  { name: "Sno", header: "Sno", minWidth: 10, maxWidth: 70,  defaultFlex: 1 },
+  { name: "Sno", header: "Sno", minWidth: 10, maxWidth: 70,  defaultFlex: 1, filterable: true },
   { name: "Name", header: "Name", minWidth: 500, defaultFlex: 1, render: ({ data }) => data.prefix + " " + data.Surname + " " + data.Name, type: "string" },
   { name: "Place", header: "Place", minWidth: 120, maxWidth: 500, defaultFlex: 1 },
   { name: "Mobile", header: "Mobile", minWidth: 120, maxWidth: 150, defaultFlex: 1, type: "number" },
@@ -457,7 +457,7 @@ const aparamGridColumns = [
 ];
 
 const filterAparamList = [
-  { name: "Name", operator: "contains", type: "string", value: "" },
+  { name: "Name", operator: "contains", type: "string", value: "" },  
   { name: "Place", operator: "contains", type: "string", value: "" },
   { name: "Mobile", operator: "gte", type: "number", value: "" },
   { name: "Landline", operator: "gte", type: "number", value: "" },

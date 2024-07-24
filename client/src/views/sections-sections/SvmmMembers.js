@@ -12,7 +12,7 @@ import {
 } from "reactstrap";
 
 // core components
-const gridStyle = { minHeight: 400 }; 
+const gridStyle = { minHeight: 403 }; 
 
 const itemsGridColumns = [
   // { name: "SNO", header: "Sno", minWidth: 10, maxWidth: 70, defaultFlex: 1 },
@@ -88,7 +88,7 @@ const WorkingCommitee2014 = [
   }
   ];
 
-const currentWorkingCommitee = [
+const WorkingCommitee2023 = [
   {  
   "TITLE":"Dr.",
   "SURNAME":"Deevi",
@@ -154,6 +154,154 @@ const currentWorkingCommitee = [
   }
   ];
 
+const CurrentWorkingCommitee = [
+  {  
+  "TITLE":"Dr.",
+  "SURNAME":"Deevi",
+  "NAME":"Sarangapani Iyengar",
+  "POSITION":"President",
+  "MOBILE":"9848072382"  
+  },
+  {    
+    "TITLE":"",
+    "SURNAME":"Tamirisa",
+    "NAME":" Vikhanasa Charyulu",
+    "POSITION":"Organising President",
+    "MOBILE":"9885304787"  
+  }
+  ,{    
+    "TITLE":"",
+    "SURNAME":"Ganjam",
+    "NAME":"Ashok Babu",
+    "POSITION":"Vice-President",
+    "MOBILE":"9440916984"  
+  }
+  ,{   
+    "TITLE":"",
+    "SURNAME":"Govardhanam",
+    "NAME":"Anantaram",
+    "POSITION":"Vice-President",
+    "MOBILE":"9866352054"  
+  }
+  ,{    
+    "TITLE":"",
+    "SURNAME":"Parasaram",
+    "NAME":"Sesha Sai",
+    "POSITION":"Vice-President",
+    "MOBILE":"9492873235"  
+  }
+  ,{    
+    "TITLE":"",
+    "SURNAME":"Deevi",
+    "NAME":"Yogananda Narasimha Deekshitulu",
+    "POSITION":"Cheif Secretary",
+    "MOBILE":"9959677000"  
+  }
+  ,{
+    "TITLE":"",
+    "SURNAME":"Rompicherla",
+    "NAME":"Mohan",
+    "POSITION":"Organising Secretary",
+    "MOBILE":"9441831333"  
+  }
+  ,{    
+    "TITLE":"",
+    "SURNAME":"Rompicherla",
+    "NAME":" Murali Krishna",
+    "POSITION":"Joint-secretary",
+    "MOBILE":"9550251037"  
+  }
+  ,{
+    "TITLE":"",
+    "SURNAME":"Vedantam",
+    "NAME":"Raghava Deekshitulu",
+    "POSITION":"Joint-secretary",
+    "MOBILE":"9849282050"  
+  }  
+  ,{    
+    "TITLE":"",
+    "SURNAME":"Sampara",
+    "NAME":"Raghu Kumar",
+    "POSITION":"Treasurer",
+    "MOBILE":"9440635800"
+  }
+  ,{    
+    "TITLE":"",
+    "SURNAME":"Rompicherla",
+    "NAME":"Lakshmi Venkata Seshu Kumar",
+    "POSITION":"Organisers",
+    "MOBILE":"9959933822"
+  }
+  ,{    
+    "TITLE":"",
+    "SURNAME":"Vadapally",
+    "NAME":"ShobanBabu",
+    "POSITION":"Organisers",
+    "MOBILE":"9949042216"
+  }
+  ,{    
+    "TITLE":"",
+    "SURNAME":"Deevi",
+    "NAME":"Parthasarathi",
+    "POSITION":"Commitee Member",
+    "MOBILE":"9010479358"
+  }
+  ,{    
+    "TITLE":"",
+    "SURNAME":"Sribhashyam",
+    "NAME":"AnanthaCharyulu",
+    "POSITION":"Commitee Member",
+    "MOBILE":"9441512376"
+  }
+  ,{    
+    "TITLE":"",
+    "SURNAME":"S V",
+    "NAME":"SatyanarayanaCharyulu",
+    "POSITION":"Commitee Member",
+    "MOBILE":"9492827299"
+  }
+  ,{    
+    "TITLE":"",
+    "SURNAME":"Khandavalli",
+    "NAME":"Venkata Ramana Murthy",
+    "POSITION":"Commitee Member",
+    "MOBILE":"9848832538"
+  }
+  ,{    
+    "TITLE":"",
+    "SURNAME":"Agnihotram",
+    "NAME":"SrinivasaCharyulu",
+    "POSITION":"Commitee Member",
+    "MOBILE":"9440035460"
+  }
+  ,{    
+    "TITLE":"",
+    "SURNAME":"Sampara",
+    "NAME":"Janardhan",
+    "POSITION":"Commitee Member",
+    "MOBILE":""
+  }
+  ,{    
+    "TITLE":"",
+    "SURNAME":"Deevi",
+    "NAME":"Rambabu",
+    "POSITION":"Commitee Member",
+    "MOBILE":""
+  }
+  ];
+
+const CommiteeGrid = ({id, title, data, style}) => (
+  <>
+    <h4><b>{title}</b></h4>
+    <ReactDataGrid
+      idProperty={id}
+      columns={itemsGridColumns}
+      dataSource={data}
+      style={style}
+    />
+  </>
+);
+
 function SvmmMembers() {
   return (
     <>
@@ -166,31 +314,32 @@ function SvmmMembers() {
                 <br></br>
                 <Card className="card-plain card-blog">
                   <Row>
-                    <Col md="12">                      
+                    <Col md="12">
                       <div>
                         <p>Vaikhanasa Maha Mandali elects its governing body by elections and the elected body will be handling their roles and responsibilities.</p>
                       </div>
-                      <h4>Current Working Comittee </h4>
-                      <ReactDataGrid
-                        idProperty="id"
-                        columns={itemsGridColumns}
-                        dataSource={currentWorkingCommitee}
-                        style={gridStyle}                        
-                      />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col md="12">                      
+                      <CommiteeGrid id="grid3" title="Working Comittee 2024" data={CurrentWorkingCommitee} style={{minHeight: 800}} />                      
                     </Col>                    
                   </Row>
                 </Card>
               </Col>
             </Row>
+            <Row>
+              <Col className="ml-auto mr-auto" md="12">
+                  <Row>
+                    <Col md="12">
+                      <CommiteeGrid id="grid2" title="Working Comittee Until 2023" data={WorkingCommitee2023} style={gridStyle}></CommiteeGrid>                      
+                    </Col>                    
+                  </Row>
+              </Col>
+            </Row>
             <Row>              
-              <Col md="12">                
-                <h4>2014-2016 Working Comittee</h4>
-                <ReactDataGrid
-                  idProperty="id"
-                  columns={itemsGridColumns}
-                  dataSource={WorkingCommitee2014}
-                  style={gridStyle}                        
-                />
+              <Col md="12">          
+                <CommiteeGrid id="grid1" title="2014-2016 Working Comittee" data={WorkingCommitee2014} style={gridStyle}></CommiteeGrid>
               </Col>              
             </Row>
           </Container>
