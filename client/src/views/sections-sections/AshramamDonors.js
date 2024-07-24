@@ -17,7 +17,7 @@ const filterDonorValue = [
   { name: 'AMOUNT', operator: 'gte', type: 'number', value: '' },
   { name: 'PLACE', operator: 'contains', type: 'string', value: '' },
   { name: 'DATE', operator: 'after', type: 'date', value: '' },
-  { name: 'RECEIPT', operator: 'after', type: 'string', value: '' },
+  { name: 'RECEIPT', operator: 'contains', type: 'string', value: '' },
 ];
 // core components
 const donorsColumns = [
