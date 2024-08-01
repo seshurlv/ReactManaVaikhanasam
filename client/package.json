@@ -55,7 +55,7 @@
     "react-dom": ">=16.8.0"
   },
   "devDependencies": {
-    "gulp": "4.0.2",
+    "gulp": "5.0.0",
     "gulp-append-prepend": "1.0.9"
   }
 }

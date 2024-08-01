@@ -2448,12 +2448,7 @@ function AshramamDonors() {
                     </div>                
                     <div className="vertical-line"></div> {/* Add this line for vertical line */}
                     <div className="accountDetails">
-                        <img
-                            alt="..."
-                            className="img img-raised rounded img-blog rellax"
-                            data-rellax-speed="4"
-                            src={qrCodeImage}
-                        />
+                      <img alt="..." className="img img-raised rounded img-blog" src={qrCodeImage} />
                     </div>                
                   </div>                  
                 </h4>
