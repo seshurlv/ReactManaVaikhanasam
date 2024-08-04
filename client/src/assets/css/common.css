@@ -40,3 +40,34 @@ th {
     justify-content: space-evenly;
     align-items: center;
 }
+
+/* Default style for desktop */
+.responsive-img {
+    width: 800px;
+    height: 600px;
+  }
+  
+  /* Style for mobile */
+  @media (max-width: 767px) {
+    .responsive-img {
+      width: 350px;
+      height: 350px;
+    }
+  }
+
+/* Default style for desktop */
+.responsive-iframe {
+    width: 600px;
+    height: 600px;
+    border: 0;
+  }
+  
+  /* Style for mobile */
+  @media (max-width: 767px) {
+    .responsive-iframe {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  
+  

@@ -44,19 +44,18 @@ function News() {
 
                         అలగే ప్రతి సంవత్సరము నిర్వహిస్తున్న <b>శ్రావణఉపాకర్మ</b> నూతన వటువుల సౌకర్యార్ధము 19.8.2024 తేదీన ఆగమోక్తముగా శ్రీ ఆర్. బి. శరవణన్ గారు ఈ కార్యక్రమము 
                         నిర్వహింతురు కాన ఈ కార్యక్రమములో ఉపాకర్మ నిర్వహించుకోదలచినవారు వివరాలు తెలుసుకొనుటకు క్రింద తెలిపిన వారిని సంప్రదించగలరు.... <br/>
-                          1. తమిరిశ విఖనసాచార్యులు 9885304787<br/>
+                          1. తమిరిశ విఖనసాచార్యులు - 9885304787 <br/>
                           2. రొంపిచెర్ల మురళీకృష్ణ - 9100949844 <br/><br/>
 
 
-                        Sri Vikhanasa Ashramam, Plotno.205, P&T colony, Kakatiya Hospital road, Medipally, Hyderabad.      
+                        Sri Vikhanasa Ashramam, Plotno.205, P&T colony, Kakatiya Hospital road, Medipally, Hyderabad.</p>      
                         <iframe 
                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243648.93036588933!2d78.41651325341068!3d17.41109000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9f42c983789f%3A0x661617d8821f945c!2sSri%20Vikhanasa%20Ashramam!5e0!3m2!1sen!2sin!4v1722494384045!5m2!1sen!2sin" 
-                          style={{width: 500, height: 450, border:0}} 
+                          className="responsive-iframe"
                           allowfullscreen="" 
                           loading="lazy" 
                           referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>                  
-                      </p>
+                        </iframe>
                       <p className="author">
                         19/Aug/2024
                       </p>

@@ -21,11 +21,11 @@ import PresentationHeader from "components/Headers/PresentationHeader.js";
 // import Testimonials from "./presentation-sections/Testimonials.js";
 // import Pricing from "./presentation-sections/Pricing.js";
 //import Ashramam from "./presentation-sections/Ashramam.js";
-import Directory from "./sections-sections/Directory.js";
-import Matrimony from "./sections-sections/Matrimony.js";
-import Purohitas from "./sections-sections/Purohitas.js";
-import News from "./sections-sections/News.js";
-import Contact from "./sections-sections/Contact.js";
+// import Directory from "./sections-sections/Directory.js";
+// import Matrimony from "./sections-sections/Matrimony.js";
+// import Purohitas from "./sections-sections/Purohitas.js";
+// import News from "./sections-sections/News.js";
+// import Contact from "./sections-sections/Contact.js";
 
 function Presentation() {
   React.useEffect(() => {
@@ -76,12 +76,12 @@ function Presentation() {
         <Image />
         <Testimonials />
         <Pricing />
-        <FooterBlack />*/}
+        <FooterBlack />
         <Directory />        
         <Matrimony />                
         <Purohitas />
         <News />        
-        <Contact />
+        <Contact />*/}
         
       </div>
     </>

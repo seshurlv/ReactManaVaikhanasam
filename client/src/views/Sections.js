@@ -28,6 +28,7 @@ import Svmm from "./sections-sections/Svmm.js";
 import SvmmMembers from "./sections-sections/SvmmMembers.js"
 import Documents from "./sections-sections/Documents.js"
 import Books from "./sections-sections/Books.js"
+import VaikhanasaPrabha from "./sections-sections/VaikhanasaPrabha.js";
 
 function Sections() {
   React.useEffect(() => {
@@ -64,7 +65,8 @@ function Sections() {
         <Purohitas />    
         <Documents />
         <Books />           
-        <Matrimony />                        
+        <Matrimony />      
+        <VaikhanasaPrabha />                  
         <Contact />         
         <VideoGallery />
         <PhotoGallery />

@@ -180,7 +180,11 @@ function ScrollTransparentNavbar() {
                   <DropdownItem to="/sections#purohitas" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     Vaikhanasa Purohitulu
-                  </DropdownItem>      
+                  </DropdownItem>
+                  <DropdownItem to="/sections#vaikhanasaprabha" tag={Link}>
+                    <i className="now-ui-icons ui-2_settings-90"></i>
+                    Vaikhanasa Prabha
+                  </DropdownItem>
                   {/* <DropdownItem>
                     <DropdownToggle caret>Downloads</DropdownToggle>
                     <DropdownMenu>
