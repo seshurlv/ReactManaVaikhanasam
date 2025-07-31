@@ -2,7 +2,7 @@ import React from "react";
 
 import ReactDataGrid from '@inovua/reactdatagrid-community';
 import '@inovua/reactdatagrid-community/index.css';
-import qrCodeImage from 'assets/QRCode/APSriVaikhanasaMahaMandali_QRScan.jpg';
+import qrCodeImage from 'assets/QRCode/APSriVaikhanasaMahaMandali_QRScan_New.jpg';
 
 // reactstrap components
 import {  
@@ -2442,9 +2442,9 @@ function AshramamDonors() {
                   <div className="accountDetails doners-container">
                     <div className="accountDetails">
                         <b>Name : </b> AP SRI VAIKHANASA MAHA MANDALI<br/>
-                        <b>Bank Name : </b> Union Bank Of India, Tarnaka Branch, Hyderabad<br/>
-                        <b>A/C No : </b> 057810011018048 <br />
-                        <b>IFSC Code : </b> UBIN0805785<br/>
+                        <b>Bank Name : </b> Union Bank Of India, Peerzadiguda, Hyderabad<br/>
+                        <b>A/C No : </b> 087310011016775 <br />
+                        <b>IFSC Code : </b> UBIN0811807<br/>
                     </div>                
                     <div className="vertical-line"></div> {/* Add this line for vertical line */}
                     <div className="accountDetails">

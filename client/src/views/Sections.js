@@ -1,5 +1,8 @@
 import React from "react";
 
+// utils
+import { handleHashFromReactRouter } from "../utils/scrollUtils.js";
+
 // reactstrap components
 
 // core components
@@ -25,9 +28,9 @@ import Purohitas from "./sections-sections/Purohitas.js";
 import News from "./sections-sections/News.js";
 import Contact from "./sections-sections/Contact.js";
 import Svmm from "./sections-sections/Svmm.js";
-import SvmmMembers from "./sections-sections/SvmmMembers.js"
-import Documents from "./sections-sections/Documents.js"
-import Books from "./sections-sections/Books.js"
+import SvmmMembers from "./sections-sections/SvmmMembers.js";
+import Documents from "./sections-sections/Documents.js";
+import Books from "./sections-sections/Books.js";
 import VaikhanasaPrabha from "./sections-sections/VaikhanasaPrabha.js";
 
 function Sections() {
@@ -35,22 +38,32 @@ function Sections() {
     document.body.classList.add("sections-page");
     document.body.classList.add("sidebar-collapse");
     document.documentElement.classList.remove("nav-open");
-    var href = window.location.href.substring(
-      window.location.href.lastIndexOf("#/") + 2
-    );
-    var hrefId = href.substring(href.lastIndexOf("#") + 1);
-    if (href.lastIndexOf("#") > 0) {
-      document.getElementById(hrefId).scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest",
-      });
-    }
+    
+    // Add smooth scroll behavior to the entire document
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Handle initial hash scroll with improved logic
+    const initialScrollTimeout = setTimeout(() => {
+      handleHashFromReactRouter();
+    }, 300); // Increased delay for initial load to ensure all components are mounted
+    
+    // Handle hash changes (when user clicks menu items)
+    const handleHashChange = () => {
+      setTimeout(() => {
+        handleHashFromReactRouter();
+      }, 50);
+    };
+    
+    window.addEventListener('hashchange', handleHashChange);
+    
     return function cleanup() {
       document.body.classList.remove("sections-page");
       document.body.classList.remove("sidebar-collapse");
+      document.documentElement.style.scrollBehavior = 'auto';
+      window.removeEventListener('hashchange', handleHashChange);
+      clearTimeout(initialScrollTimeout);
     };
-  });
+  }, []); // Added dependency array for proper cleanup
   return (
     <>
       <WhiteNavbar />
@@ -62,14 +75,14 @@ function Sections() {
         <Svmm />
         <SvmmMembers />
         <Directory />        
-        <Purohitas />    
-        <Documents />
-        <Books />           
-        <Matrimony />      
-        <VaikhanasaPrabha />                  
-        <Contact />         
+        <Purohitas />   
+        <Documents />            
+        <Matrimony />   
+        <VaikhanasaPrabha />
+        <Books />                 
         <VideoGallery />
         <PhotoGallery />
+        <Contact />
       </div>
     </>
   );

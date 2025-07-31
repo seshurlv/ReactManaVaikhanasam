@@ -109,13 +109,12 @@ function Contact() {
         >
           <Container>
             <Row>
-              <Col className="ml-auto mr-auto text-center" md="6">
+              <Col className="ml-auto mr-auto text-center" md="12">
                 <h2 className="title">Contact US @</h2>                
               </Col>
             </Row>
-            <Row>
-              <Col md="4"></Col>
-              <Col md="4">
+            <Row>              
+              <Col md="12">
                 <Card className="card-testimonial">
                   <div className="card-avatar">
                     <a href="#pablo" onClick={(e) => e.preventDefault()}>
@@ -128,7 +127,9 @@ function Contact() {
                   </div>
                   <CardBody>
                     <p className="card-description">
-                      Attempt to help the Vaikhanasa Community. Please co-operate in sharing the news/information/resources among the vaikhanasas spread across the world.
+                      My sincere attempt to serve the Vaikhanasa community by creating a space where everyone can stay informed and connected. 
+                      <br/><br/>
+                      I kindly request your cooperation in sharing relevant news, information, and resources to benefit Vaikhanasas across the globe. Together, we can build a stronger, more informed community.
                     </p>
                   </CardBody>
                   <div className="icon icon-info">

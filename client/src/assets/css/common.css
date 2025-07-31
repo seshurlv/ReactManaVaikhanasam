@@ -1,9 +1,18 @@
+/* Global smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure sections have proper offset for fixed navbar */
+.cd-section {
+    scroll-margin-top: 70px; /* Adjust based on your navbar height */
+}
+
 .accountDetails{
     background-color : darkred;
     color: beige;
     border-radius: 1.75em;
-    line-height: 2em;
-    padding: 10px;
+    line-height: 2em
 }
 
 
