@@ -1,5 +1,8 @@
 import React  from "react";
 import ReactPlayer from "react-player";
+import video01 from "../../assets/videos/Sri_Vaikhanasam.mp4";
+import video02 from "../../assets/videos/Sri_Vikhanasa_Sthotra_Patham.mp4";
+
 
 // reactstrap components
 import {    
@@ -27,7 +30,7 @@ function VideoGallery() {
                 <Col className="ml-auto mr-auto" md="4">                                  
                     <div>
                         <ReactPlayer                        
-                            url= "videos/Sri_Vaikhanasam.mp4"
+                            url= {video01}
                             width='100%'
                             height='100%'
                             controls = {true}
@@ -40,7 +43,7 @@ function VideoGallery() {
                 <Col className="ml-auto mr-auto" md="4">                                  
                     <div>
                         <ReactPlayer                        
-                            url= "videos/Sri_Vikhanasa_Sthotra_Patham.mp4"
+                            url= {video02}
                             width='100%'
                             height='100%'
                             controls = {true}

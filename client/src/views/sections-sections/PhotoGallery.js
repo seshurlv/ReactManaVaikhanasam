@@ -9,6 +9,17 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import photos from "./SitePhotos.ts";
 import ReactPlayer from "react-player";
+// Add these imports at the top
+import video01 from "../../assets/videos/kvs2023videos/01.mp4";
+import video02 from "../../assets/videos/kvs2023videos/02.mp4"; 
+import video03 from "../../assets/videos/kvs2023videos/03.mp4";
+import video04 from "../../assets/videos/kvs2023videos/04.mp4"; 
+import video05 from "../../assets/videos/kvs2023videos/05.mp4";
+import video06 from "../../assets/videos/kvs2023videos/06.mp4"; 
+import video07 from "../../assets/videos/kvs2023videos/07.mp4";
+
+// ... import other videos
+
 
 // reactstrap components
 import {
@@ -72,11 +83,12 @@ function PhotoGallery() {
                       // enable optional lightbox plugins
                       plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
                   />
+                  <br/>
                   <Row>
                     <Col className="ml-auto mr-auto" md="4">                                  
                       <div>
                           <ReactPlayer                        
-                              url= "videos/kvs2023videos/01.mp4"
+                              url= {video01}
                               width='100%'
                               height='100%'
                               controls = {true}
@@ -86,7 +98,7 @@ function PhotoGallery() {
                     <Col className="ml-auto mr-auto" md="4">                                  
                         <div>
                           <ReactPlayer                        
-                            url= "videos/kvs2023videos/02.mp4"
+                            url= {video02}
                             width='100%'
                             height='100%'
                             controls = {true}
@@ -96,7 +108,7 @@ function PhotoGallery() {
                     <Col className="ml-auto mr-auto" md="4">                                  
                         <div>
                         <ReactPlayer                        
-                            url= "videos/kvs2023videos/03.mp4"
+                            url= {video03}
                             width='100%'
                             height='100%'
                             controls = {true}
@@ -106,7 +118,7 @@ function PhotoGallery() {
                     <Col className="ml-auto mr-auto" md="4">                                  
                         <div>
                         <ReactPlayer                        
-                            url= "videos/kvs2023videos/04.mp4"
+                            url= {video04}
                             width='100%'
                             height='100%'
                             controls = {true}
@@ -116,7 +128,7 @@ function PhotoGallery() {
                     <Col className="ml-auto mr-auto" md="4">                                  
                         <div>
                         <ReactPlayer                        
-                            url= "videos/kvs2023videos/05.mp4"
+                            url= {video05}
                             width='100%'
                             height='100%'
                             controls = {true}
@@ -126,7 +138,7 @@ function PhotoGallery() {
                     <Col className="ml-auto mr-auto" md="4">                                  
                         <div>  
                         <ReactPlayer                        
-                            url= "videos/kvs2023videos/06.mp4"
+                            url= {video06}
                             width='100%'
                             height='100%'
                             controls = {true}
@@ -136,7 +148,7 @@ function PhotoGallery() {
                     <Col className="ml-auto mr-auto" md="4">                                  
                         <div>  
                         <ReactPlayer                        
-                            url= "videos/kvs2023videos/07.mp4"
+                            url= {video07}
                             width='100%'
                             height='100%'
                             controls = {true}
