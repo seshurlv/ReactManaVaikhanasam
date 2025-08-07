@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher.js";
+
 // reactstrap components
 import {
   //Button,
@@ -10,7 +13,7 @@ import {
   UncontrolledDropdown,
   NavbarBrand,
   Navbar,
-  //NavItem,
+  NavItem,
   Nav,
   Container,
   UncontrolledTooltip,
@@ -18,6 +21,7 @@ import {
 
 function ScrollTransparentNavbar() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
+   const { t } = useTranslation();
   const [navbarColor, setNavbarColor] = React.useState(
     (document.documentElement.scrollTop > 499 || document.body.scrollTop) > 499
       ? ""
@@ -64,7 +68,7 @@ function ScrollTransparentNavbar() {
         <Container>
           <div className="navbar-translate">
             <NavbarBrand to="/" tag={Link} id="navbar-brand">
-              Mana Vaikhanasam
+              {t('homePage.title')}
             </NavbarBrand>
             <UncontrolledTooltip target="navbar-brand">
               Mana Vaikhanasam by Seshu Rompicherla
@@ -95,7 +99,7 @@ function ScrollTransparentNavbar() {
                   tag={Link}
                 >
                   <i className="now-ui-icons design_app"></i>
-                  <p>Home</p>
+                   <p>{t('nav.home')}</p>
                 </DropdownToggle>                
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
@@ -112,17 +116,17 @@ function ScrollTransparentNavbar() {
                     aria-hidden={true}
                     className="now-ui-icons files_paper"
                   ></i>
-                  <p>Ashramam</p>
+                  <p>{t('nav.ashramam')}</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
                   <DropdownItem to="/sections#ashramam" tag={Link}>
                     <i className="now-ui-icons shopping_box"></i>
-                    Hyderabad Ashramam
+                     {t('nav.hyderabadAshramam')}
                   </DropdownItem>
                   <DropdownItem to="/sections#ashramamdonors" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
-                    Hyderabad Ashramam Donors
-                  </DropdownItem>                  
+                    {t('nav.hyderabadAshramamDonors')}
+                  </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
@@ -139,17 +143,17 @@ function ScrollTransparentNavbar() {
                     aria-hidden={true}
                     className="now-ui-icons files_paper"
                   ></i>
-                  <p>Gallery</p>
+                  <p>{t('nav.gallery')}</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
                   <DropdownItem to="/sections#photogallery" tag={Link}>
                     <i className="now-ui-icons shopping_box"></i>
-                    Photos
+                    {t('nav.photos')}
                   </DropdownItem>
                   <DropdownItem to="/sections#videogallery" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
-                    Videos
-                  </DropdownItem>                  
+                    {t('nav.videos')}
+                  </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
@@ -166,24 +170,28 @@ function ScrollTransparentNavbar() {
                     aria-hidden={true}
                     className="now-ui-icons files_paper"
                   ></i>
-                  <p>Services</p>
+                  <p>{t('nav.services')}</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
                   <DropdownItem to="/sections#directory" tag={Link}>
                     <i className="now-ui-icons shopping_box"></i>
-                    Directory
+                    {t('nav.directory')}
                   </DropdownItem>
                   <DropdownItem to="/sections#matrimony" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
-                    Matrimony
-                  </DropdownItem> 
+                    {t('nav.matrimony')}
+                  </DropdownItem>
                   <DropdownItem to="/sections#purohitas" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
-                    Vaikhanasa Purohitulu
+                    {t('nav.vaikhanasaPurohitulu')}
                   </DropdownItem>
                   <DropdownItem to="/sections#vaikhanasaprabha" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
-                    Vaikhanasa Prabha
+                    {t('nav.vaikhanasaPrabha')}
+                  </DropdownItem>
+                  <DropdownItem to="/sections#books" tag={Link}>
+                    <i className="now-ui-icons ui-2_settings-90"></i>
+                    {t('nav.books')}
                   </DropdownItem>
                   {/* <DropdownItem>
                     <DropdownToggle caret>Downloads</DropdownToggle>
@@ -212,17 +220,14 @@ function ScrollTransparentNavbar() {
                     aria-hidden={true}
                     className="now-ui-icons files_paper"
                   ></i>
-                  <p>Download</p>
+                  <p>{t('nav.download')}</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
                   <DropdownItem to="/sections#documents" tag={Link}>
                     <i className="now-ui-icons shopping_box"></i>
-                    Documents
+                    {t('nav.documents')}
                   </DropdownItem>
-                  <DropdownItem to="/sections#books" tag={Link}>
-                    <i className="now-ui-icons ui-2_settings-90"></i>
-                    Books
-                  </DropdownItem>
+                  
                   {/* <DropdownItem to="/sections#features" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     Pravachanamulu
@@ -251,19 +256,21 @@ function ScrollTransparentNavbar() {
                     aria-hidden={true}
                     className="now-ui-icons files_paper"
                   ></i>
-                  <p>Welfare</p>
+                  <p>{t('nav.welfare')}</p>
                 </DropdownToggle>
-                
-                <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
+                  <DropdownMenu>
+                    <DropdownItem header>
+                    <strong>{t('nav.svmm')}</strong>
+                  </DropdownItem>
                   <DropdownItem to="/sections#svmm" tag={Link}>
                     <i className="now-ui-icons shopping_box"></i>
-                    About Sri Vaikhanasa Maha Mandali
+                    {t('nav.sriVaikhanasaMahaMandali')}
                   </DropdownItem>
                   <DropdownItem to="/sections#svmmmembers" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
-                    SVMM Working Committee
-                  </DropdownItem>                                                
-                </DropdownMenu>
+                    {t('nav.svmmWorkingCommittee')}
+                  </DropdownItem>
+                  </DropdownMenu>                
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
                 <DropdownToggle
@@ -277,7 +284,7 @@ function ScrollTransparentNavbar() {
                       aria-hidden={true}
                       className="now-ui-icons files_paper"
                     ></i>
-                    <p>News</p>
+                    <p>{t('nav.news')}</p>
                   </DropdownToggle>                
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
@@ -293,7 +300,7 @@ function ScrollTransparentNavbar() {
                     aria-hidden={true}
                     className="now-ui-icons files_paper"
                   ></i>
-                  <p>Contact Us</p>
+                  <p>{t('nav.contactUs')}</p>
                 </DropdownToggle>                
               </UncontrolledDropdown>
               
@@ -421,6 +428,9 @@ function ScrollTransparentNavbar() {
                   <p>Buy Now</p>
                 </Button>
               </NavItem> */}
+              <NavItem>
+                <LanguageSwitcher />
+              </NavItem>
             </Nav>
           </Collapse>
         </Container>

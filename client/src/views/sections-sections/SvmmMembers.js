@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 import ReactDataGrid from '@inovua/reactdatagrid-community';
 import '@inovua/reactdatagrid-community/index.css';
@@ -14,11 +15,11 @@ import {
 // core components
 const gridStyle = { minHeight: 403 }; 
 
-const itemsGridColumns = [
+const getItemsGridColumns = (t) => [
   // { name: "SNO", header: "Sno", minWidth: 10, maxWidth: 70, defaultFlex: 1 },
-  { name: "NAME", header: "Name", minWidth: 300, defaultFlex: 1, render: ({ data }) => data.TITLE + ' ' + data.SURNAME + ' ' + data.NAME, type: 'string' },
-  { name: "POSITION", header: "Position", minWidth: 150, maxWidth: 1000, defaultFlex: 1 },
-  { name: "MOBILE", header: "Mobile", minWidth: 120, maxWidth: 150, defaultFlex: 1, },
+  { name: "NAME", header: t('svmmMembers.gridHeaders.name'), minWidth: 300, defaultFlex: 1, render: ({ data }) => data.TITLE + ' ' + data.SURNAME + ' ' + data.NAME, type: 'string' },
+  { name: "POSITION", header: t('svmmMembers.gridHeaders.position'), minWidth: 150, maxWidth: 1000, defaultFlex: 1 },
+  { name: "MOBILE", header: t('svmmMembers.gridHeaders.mobile'), minWidth: 120, maxWidth: 150, defaultFlex: 1, },
   //{ name: "IMG", header: "Image", maxWidth: 1000, defaultFlex: 1, render: ({data}) => data.IMG },  
 ];
 
@@ -290,12 +291,12 @@ const CurrentWorkingCommitee = [
   }
   ];
 
-const CommiteeGrid = ({id, title, data, style}) => (
+const CommiteeGrid = ({id, title, data, style, t}) => (
   <>
     <h4><b>{title}</b></h4>
     <ReactDataGrid
       idProperty={id}
-      columns={itemsGridColumns}
+      columns={getItemsGridColumns(t)}
       dataSource={data}
       style={style}
     />
@@ -303,6 +304,8 @@ const CommiteeGrid = ({id, title, data, style}) => (
 );
 
 function SvmmMembers() {
+  const { t } = useTranslation();
+  
   return (
     <>
       <div className="cd-section" id="svmmmembers">
@@ -310,19 +313,19 @@ function SvmmMembers() {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="12">
-                <h2 className="title">Sri Vikhanasa Maha Mandali Working Committee Members, Hyderabad</h2>
+                <h2 className="title">{t('svmmMembers.title')}</h2>
                 <br></br>
                 <Card className="card-plain card-blog">
                   <Row>
                     <Col md="12">
                       <div>
-                        <p>Vaikhanasa Maha Mandali elects its governing body by elections and the elected body will be handling their roles and responsibilities.</p>
+                        <p>{t('svmmMembers.description')}</p>
                       </div>
                     </Col>
                   </Row>
                   <Row>
                     <Col md="12">                      
-                      <CommiteeGrid id="grid3" title="Working Comittee 2024" data={CurrentWorkingCommitee} style={{minHeight: 800}} />                      
+                      <CommiteeGrid id="grid3" title={t('svmmMembers.currentCommittee')} data={CurrentWorkingCommitee} style={{minHeight: 800}} t={t} />                      
                     </Col>                    
                   </Row>
                 </Card>
@@ -332,14 +335,14 @@ function SvmmMembers() {
               <Col className="ml-auto mr-auto" md="12">
                   <Row>
                     <Col md="12">
-                      <CommiteeGrid id="grid2" title="Working Comittee Until 2023" data={WorkingCommitee2023} style={gridStyle}></CommiteeGrid>                      
+                      <CommiteeGrid id="grid2" title={t('svmmMembers.committee2023')} data={WorkingCommitee2023} style={gridStyle} t={t}></CommiteeGrid>                      
                     </Col>                    
                   </Row>
               </Col>
             </Row>
             <Row>              
               <Col md="12">          
-                <CommiteeGrid id="grid1" title="2014-2016 Working Comittee" data={WorkingCommitee2014} style={gridStyle}></CommiteeGrid>
+                <CommiteeGrid id="grid1" title={t('svmmMembers.committee2014')} data={WorkingCommitee2014} style={gridStyle} t={t}></CommiteeGrid>
               </Col>              
             </Row>
           </Container>

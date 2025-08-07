@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 // reactstrap components
 import {  
@@ -11,6 +12,8 @@ import {
 // core components
 
 function Ashramam() {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="cd-section" id="ashramam">
@@ -18,27 +21,25 @@ function Ashramam() {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="10">
-                <h2 className="title">Sri Vikhanasa Ashramam, Hyderabad</h2>
+                <h2 className="title">{t('ashramam.title')}</h2>
                 <br></br>
                 <Card className="card-plain card-blog">
                   <Row>
                     <Col md="5">
                       <div className="card-image">
                         <img
-                          alt="..."
+                          alt={t('ashramam.imageAlt')}
                           className="img img-raised rounded"
                           src={require("assets/img/hyderabad-ashramam/proposed.jpg")}
                         ></img>
                       </div>
                     </Col>
                     <Col md="7">
-                      <h6 className="category text-info mt-3">Sri Vikhanasa Ashramam @ Hyderabad</h6>                      
-                      <p className="card-description">
-                        Sri Vikhanasa Ashramam is being built at Plot # 205, P&T colony, Kakatiya Hospital Road, Medipally, Hyderabad. 
-                        
-                        This mile stone is getting achieved by all the support that we are receiving from our beloved vaikhanasa Bhandu’s. <br/><br/>
+                      <h6 className="category text-info mt-3">{t('ashramam.category')}</h6>
+                      <p className="card-description">{t('ashramam.description')}
+                          <br/><br/>
 
-                        <b>Location</b><br/>
+                        <b>{t('ashramam.location')}</b><br/>
                         <iframe 
                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243648.93036588933!2d78.41651325341068!3d17.41109000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9f42c983789f%3A0x661617d8821f945c!2sSri%20Vikhanasa%20Ashramam!5e0!3m2!1sen!2sin!4v1722494384045!5m2!1sen!2sin" 
                           className="responsive-iframe"

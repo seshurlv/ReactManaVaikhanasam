@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 //import Video from "yet-another-react-lightbox/plugins/video";
@@ -22,12 +23,7 @@ import video07 from "../../assets/videos/kvs2023videos/07.mp4";
 
 
 // reactstrap components
-import {
-  // Button,
-  // Card,
-  // CardBody,
-  // CardFooter,
-  // CardTitle,
+import {  
   Container,
   Row,
   Col
@@ -36,6 +32,7 @@ import {
 
 
 function PhotoGallery() {
+  const { t } = useTranslation();
   const [index, setIndex] = useState(-1);
   const [index1, setIndex1] = useState(-1);
   const [index2, setIndex2] = useState(-1);
@@ -59,20 +56,20 @@ function PhotoGallery() {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto " md="12">
-                <h2 className="title text-center">Photo Gallery</h2> 
+                <h2 className="title text-center">{t('photoGallery.title')}</h2> 
                 <h4 className="description">
-                  This is a page to view all the photos related to recent events held at different places.                  
+                  {t('photoGallery.description')}                  
                 </h4>
               </Col>
             </Row>
             <Row>
               <Col className="ml-auto mr-auto " md="12">                
                 <h4 className="text-center">
-                  Sri Vaikhanasa Maha Mandali, Hyderabad - Kartheeka Vana Samaradhana 2023<br/><br/>                  
+                  {t('photoGallery.kvs2023.title')}<br/><br/>                  
                 </h4>
                 <div>
                   <p>
-                    శ్రీ వైఖానస మహామండలి, హైదరాబాద్ వారు 10/Dec/2023 రోజున హైదరాబాద్ శ్రీవిఖనస ఆశ్రమంలో నిర్వహించిన కార్తీక వనసమారాధన కార్యక్రమం. శ్రీమతి పరాశరం ఇందిర గారు వారి త్రైలోక్య ఆర్ట్స్ అసోసియేషన్ తరపున వారి శిష్యుల ద్వారా చాలా చక్కని నాట్య ప్రదర్శన ఇచ్చారు. 
+                    {t('photoGallery.kvs2023.description')}
                   </p>                
                   <PhotoAlbum photos={photos.kvs2023Photos} layout="rows" targetRowHeight={150} onClick={({ index }) => setIndex14(index)} />
                   <Lightbox
@@ -168,11 +165,11 @@ function PhotoGallery() {
             <Row>
               <Col className="ml-auto mr-auto " md="12">                
                 <h4 className="text-center">
-                  AP Youth Forum - 2021 Sravana Poornima Celebrations<br/><br/>                  
+                  {t('photoGallery.apyf2021.title')}<br/><br/>                  
                 </h4>
                 <div>
                   <p>
-                  వైఖానస యూత్ ఫోరమ్ టౌన్ అర్బన్ & రూరల్ శాఖ వారి ఆధ్వర్యంలో శ్రీ ధన్వంతరి ట్రస్ట్ భవనము, DR దీవి లక్ష్మణా చార్యులు, కృష్ణ వేణమ్మ గార్ల ధ్యాన మందిరం, వణుకూరు లో విఖనసాచార్యులు, హయాగ్రీవ స్వామి వారి తిరు నక్షత్రం మహోత్సవం మరియు వర్ష వర్ధన హోమం శ్రీ సుదర్శనం సీతారామ్ మరియు శ్రీ పవన్ వారి యాజ్నిక నిర్వాహణ లో అత్యంత వైభోపేతముగా జరిగింది ఈ కార్యక్రమం నకు షుమారు 125 మంది వైఖానస బంధువులు పాల్గొని జయప్రదం చేసినారు ఈ కార్యక్రమానికి వైఖానస యూత్ ఫోరం రాష్ట్ర శాఖ అధ్యక్షులు శ్రీ DR దీవి శ్రీనివాసకృష్ణ - జానకి గారి దంపతులు చే వచ్చిన అతిధులందరికి విఖనస జయంతి జ్ఞాపిక కానుకలు అందచేసినారు ఇట్లు మీ అభినందనలు తో వైఖానస యూత్ ఫోరం విజయవాడ టౌన్, అర్బన్ & రూరల్ శాఖ అధ్యక్షులు వేదాంతం పార్ధసారధి గారు, సెక్రటరీ చలపతి గారు మరియు కోశాధికారి దీవి ఫణి రాజ కుమార్.
+                  {t('photoGallery.apyf2021.description')}
                   </p>                
                   <PhotoAlbum photos={photos.apyf2021Photos} layout="rows" targetRowHeight={150} onClick={({ index }) => setIndex(index)} />
                   <Lightbox

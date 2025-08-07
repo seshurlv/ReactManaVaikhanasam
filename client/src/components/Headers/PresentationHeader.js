@@ -1,11 +1,14 @@
 /*eslint-disable*/
 import React from "react";
+import { useTranslation } from 'react-i18next';
+
 
 // reactstrap components
 
 // core components
 
 function PresentationHeader() {
+   const { t } = useTranslation();
   return (
     <>
       <div className="page-header clear-filter">
@@ -35,18 +38,18 @@ function PresentationHeader() {
           ></div>
         </div>
         <div className="rellax-text-container rellax-text">
-          <h1 className="h1-seo" data-rellax-speed="-1">
-            Mana Vaikhanasam
+          <h1 className="h1-seo" style={{ height: "120px" }} data-rellax-speed="-1">
+            {t('homePage.title')}
           </h1>          
         </div>
         <h3 className="h3-description rellax-text" data-rellax-speed="-1">
-          Sri Gurubhyo Namah
+          {t('homePage.SriGuru')}
         </h3>
         <h6
           className="category category-absolute rellax-text"
           data-rellax-speed="-1"
         >
-          Developed & Maintained By Seshu Rompicherla
+          {t('homePage.development')}
           {/* <a href="http://invisionapp.com/?ref=creativetim" target="_blank">
             <img
               alt="..."

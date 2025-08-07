@@ -1,4 +1,4 @@
-/*eslint-disable*/
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
@@ -20,9 +20,40 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
-function WhiteNavbar() {
+function ScrollTransparentNavbar() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
+  const [navbarColor, setNavbarColor] = React.useState(
+    (document.documentElement.scrollTop > 499 || document.body.scrollTop) > 499
+      ? ""
+      : " navbar-transparent"
+  );
   const { t } = useTranslation();
+  // const [buyButtonColor, setBuyButtonColor] = React.useState(
+  //   (document.documentElement.scrollTop > 499 || document.body.scrollTop) > 499
+  //     ? "info"
+  //     : "neutral"
+  // );
+  React.useEffect(() => {
+    const updateNavbarColor = () => {
+      if (
+        document.documentElement.scrollTop > 499 ||
+        document.body.scrollTop > 499
+      ) {
+        setNavbarColor("");
+        //setBuyButtonColor("info");
+      } else if (
+        document.documentElement.scrollTop < 500 ||
+        document.body.scrollTop < 500
+      ) {
+        setNavbarColor(" navbar-transparent");
+        //setBuyButtonColor("neutral");
+      }
+    };
+    window.addEventListener("scroll", updateNavbarColor);
+    return function cleanup() {
+      window.removeEventListener("scroll", updateNavbarColor);
+    };
+  });
   return (
     <>
       {collapseOpen ? (
@@ -34,11 +65,11 @@ function WhiteNavbar() {
           }}
         />
       ) : null}
-      <Navbar className="bg-white fixed-top" expand="lg">
+      <Navbar className={"fixed-top" + navbarColor} color="white" expand="lg">
         <Container>
           <div className="navbar-translate">
             <NavbarBrand to="/" tag={Link} id="navbar-brand">
-              {t('homePage.title')}
+              Mana Vaikhanasam
             </NavbarBrand>
             <UncontrolledTooltip target="navbar-brand">
               Mana Vaikhanasam by Seshu Rompicherla
@@ -91,12 +122,12 @@ function WhiteNavbar() {
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
                   <DropdownItem to="/sections#ashramam" tag={Link}>
                     <i className="now-ui-icons shopping_box"></i>
-                    {t('nav.hyderabadAshramam')}
+                     {t('nav.hyderabadAshramam')}
                   </DropdownItem>
                   <DropdownItem to="/sections#ashramamdonors" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     {t('nav.hyderabadAshramamDonors')}
-                  </DropdownItem>                  
+                  </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
@@ -113,7 +144,7 @@ function WhiteNavbar() {
                     aria-hidden={true}
                     className="now-ui-icons files_paper"
                   ></i>
-                  <p>{t('nav.gallery')}</p>
+                   <p>{t('nav.gallery')}</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
                   <DropdownItem to="/sections#photogallery" tag={Link}>
@@ -123,7 +154,7 @@ function WhiteNavbar() {
                   <DropdownItem to="/sections#videogallery" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     {t('nav.videos')}
-                  </DropdownItem>                  
+                  </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
@@ -140,7 +171,7 @@ function WhiteNavbar() {
                     aria-hidden={true}
                     className="now-ui-icons files_paper"
                   ></i>
-                  <p>{t('nav.services')}</p>
+                   <p>{t('nav.services')}</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
                   <DropdownItem to="/sections#directory" tag={Link}>
@@ -150,7 +181,7 @@ function WhiteNavbar() {
                   <DropdownItem to="/sections#matrimony" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     {t('nav.matrimony')}
-                  </DropdownItem> 
+                  </DropdownItem>
                   <DropdownItem to="/sections#purohitas" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     {t('nav.vaikhanasaPurohitulu')}
@@ -158,11 +189,18 @@ function WhiteNavbar() {
                   <DropdownItem to="/sections#vaikhanasaprabha" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     {t('nav.vaikhanasaPrabha')}
-                  </DropdownItem>    
-                  <DropdownItem to="/sections#books" tag={Link}>
-                    <i className="now-ui-icons ui-2_settings-90"></i>
-                    {t('nav.books')}
-                  </DropdownItem>            
+                  </DropdownItem>
+                  {/* <DropdownItem>
+                    <DropdownToggle caret>Downloads</DropdownToggle>
+                    <DropdownMenu>
+                      <DropdownItem to="/sections#subitem1" tag={Link}>
+                        Subitem 1
+                      </DropdownItem>
+                      <DropdownItem to="/sections#subitem2" tag={Link}>
+                        Subitem 2
+                      </DropdownItem>                      
+                    </DropdownMenu>                   
+                  </DropdownItem>              */}
                 </DropdownMenu>
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
@@ -186,7 +224,10 @@ function WhiteNavbar() {
                     <i className="now-ui-icons shopping_box"></i>
                     {t('nav.documents')}
                   </DropdownItem>
-                 
+                  <DropdownItem to="/sections#books" tag={Link}>
+                    <i className="now-ui-icons ui-2_settings-90"></i>
+                    {t('nav.books')}
+                  </DropdownItem>
                   {/* <DropdownItem to="/sections#features" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     Pravachanamulu
@@ -208,7 +249,7 @@ function WhiteNavbar() {
                   data-toggle="dropdown"
                   href="#pablo"
                   id="navbarDropdownMenuLink"
-                  nav
+                  nav                  
                   onClick={(e) => e.preventDefault()}
                 >
                   <i
@@ -217,35 +258,32 @@ function WhiteNavbar() {
                   ></i>
                   <p>{t('nav.welfare')}</p>
                 </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem header>
-                      <strong>{t('nav.svmm')}</strong>
-                    </DropdownItem>
-                    <DropdownItem to="/sections#svmm" tag={Link}>
-                      <i className="now-ui-icons shopping_box"></i>
-                        {t('nav.sriVaikhanasaMahaMandali')}
-                    </DropdownItem>
-                    <DropdownItem to="/sections#svmmmembers" tag={Link}>
-                      <i className="now-ui-icons ui-2_settings-90"></i>
-                       {t('nav.svmmWorkingCommittee')}
-                    </DropdownItem>
-                  </DropdownMenu>                                  
+                
+                <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
+                  <DropdownItem to="/sections#svmm" tag={Link}>
+                    <i className="now-ui-icons shopping_box"></i>
+                    {t('nav.sriVaikhanasaMahaMandali')}
+                  </DropdownItem>
+                  <DropdownItem to="/sections#svmmmembers" tag={Link}>
+                    <i className="now-ui-icons ui-2_settings-90"></i>
+                    {t('nav.svmmWorkingCommittee')}
+                  </DropdownItem>                                                
+                </DropdownMenu>
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
                 <DropdownToggle
-                  caret       
-                  color="default"                            
-                  id="navbarDropdownMenuLink"
-                  nav      
-                  to="/sections#news"            
-                  tag={Link}
-                >
-                  <i
-                    aria-hidden={true}
-                    className="now-ui-icons files_paper"
-                  ></i>
-                  <p>{t('nav.news')}</p>
-                </DropdownToggle>            
+                    caret                                   
+                    id="navbarDropdownMenuLink"
+                    nav      
+                    to="/sections#news"            
+                    tag={Link}
+                  >
+                    <i
+                      aria-hidden={true}
+                      className="now-ui-icons files_paper"
+                    ></i>
+                    <p>News</p>
+                  </DropdownToggle>                
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
                 <DropdownToggle
@@ -260,10 +298,11 @@ function WhiteNavbar() {
                     aria-hidden={true}
                     className="now-ui-icons files_paper"
                   ></i>
-                  <p>{t('nav.contactUs')}</p>
+                   <p>{t('nav.contactUs')}</p>
                 </DropdownToggle>                
               </UncontrolledDropdown>
-              {/*<UncontrolledDropdown nav>
+              
+              { /*<UncontrolledDropdown nav>
                 <DropdownToggle
                   caret
                   color="default"
@@ -277,7 +316,7 @@ function WhiteNavbar() {
                     aria-hidden={true}
                     className="now-ui-icons files_paper"
                   ></i>
-                  <p>Sections</p>
+                  <p>Sections real</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
                   <DropdownItem to="/sections#headers" tag={Link}>
@@ -377,11 +416,11 @@ function WhiteNavbar() {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-               <NavItem>
+              <NavItem>
                 <Button
-                  className="nav-link"
-                  color="info"
-                  href="https://www.creative-tim.com/product/now-ui-kit-pro-react?ref=nuk-pro-react-white-navbar"
+                  className="nav-link btn-default"
+                  color={buyButtonColor}
+                  href="https://www.creative-tim.com/product/now-ui-kit-pro-react?ref=nuk-pro-react-scroll-transparent-navbar"
                   target="_blank"
                 >
                   <p>Buy Now</p>
@@ -398,4 +437,4 @@ function WhiteNavbar() {
   );
 }
 
-export default WhiteNavbar;
+export default ScrollTransparentNavbar;

@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import ReactDataGrid from '@inovua/reactdatagrid-community';
 import '@inovua/reactdatagrid-community/index.css';
 import DirectoryItems from './DirectorySourceFile.json';
@@ -17,11 +18,11 @@ const filterValue = [
 ];
 
 // core components
-const columns = [
-  { name: "Sno", header: "Sno", minWidth: 10, maxWidth: 70, defaultFlex: 1 },
-  { name: "Name", header: "Name", minWidth: 500, defaultFlex: 1, type: 'string' },
-  { name: "Father", header: "Father", minWidth: 300, maxWidth: 1000, defaultFlex: 1 },
-  { name: "Gotram", header: "Gotram", minWidth: 200, maxWidth: 1000, defaultFlex: 1 },  
+const getColumns = (t) => [
+  { name: "Sno", header: t('directory.gridHeaders.sno'), minWidth: 10, maxWidth: 70, defaultFlex: 1 },
+  { name: "Name", header: t('directory.gridHeaders.name'), minWidth: 500, defaultFlex: 1, type: 'string' },
+  { name: "Father", header: t('directory.gridHeaders.father'), minWidth: 300, maxWidth: 1000, defaultFlex: 1 },
+  { name: "Gotram", header: t('directory.gridHeaders.gotram'), minWidth: 200, maxWidth: 1000, defaultFlex: 1 },  
 ];
 
 // define grid styles here
@@ -31,6 +32,8 @@ const gridStyle = { minHeight: 650 };
 const dataSource = DirectoryItems;
   
 function Directory() {
+  const { t } = useTranslation();
+  
   return (
     <>
       <div className="cd-section" id="directory">
@@ -38,19 +41,16 @@ function Directory() {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="12">
-                <h2 className="title">Vaikhanasa Directory</h2>
+                <h2 className="title">{t('directory.title')}</h2>
                 <h4 className="description">
-                  Vaikhanasa Directory is the service to make information available regarding our vaikhanasas residing at different parts of this world. 
-                  Please let us know the names of the persons not listed in this table through the feedback form available in contact page. 
-                  We will make the best possible effort to include the names as early as posssible.
+                  {t('directory.description')}
                   <br/><br />
-                  Please send the below details to get added into this list: Name (full name with surname), Gotram, Fathers Name, Native place, Phone, Email, Address, Profession, 
-                  photo via email provided below @ <b>seshu.manavaikhanasam@gmail.com</b>                  
+                  {t('directory.addDetails')} <b>{t('directory.email')}</b>                  
                 </h4>
                 <br/><br/>
                 <ReactDataGrid
                   idProperty="id"
-                  columns={columns}
+                  columns={getColumns(t)}
                   dataSource={dataSource}
                   style={gridStyle}
                   defaultFilterValue={filterValue}

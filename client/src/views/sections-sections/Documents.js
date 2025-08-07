@@ -1,20 +1,26 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import "@inovua/reactdatagrid-community/index.css";
 
 // reactstrap components
 import { Container, Row, Col } from "reactstrap";
 
-const downloadApplicationsItemList = [
-    {"SNO": 1, "NAME": "Sri Vaikhanasa Maha Mandali Vivaha Paricheya Vedika Matrimony Application Form (Telugu)", "FILEURL":  require("assets/docs/vaikhanasa_marriage_application_telugu.pdf"), "IMGURL": require("assets\\siteimg\\common\\pdf_download.jpg")},
-    {"SNO": 2, "NAME": "Sri Vaikhanasa Maha Mandali Vivaha Paricheya Vedika Matrimony Application Form (English)", "FILEURL":  require("assets/docs/vaikhanasa_marriage_application_english.pdf"), "IMGURL": require("assets\\siteimg\\common\\pdf_download.jpg")}
+const getDownloadApplicationsItemList = (t) => [
+    {"SNO": 1, "NAME": t('documents.items.matrimonyTelugu'), "FILEURL":  require("assets/docs/vaikhanasa_marriage_application_telugu.pdf"), "IMGURL": require("assets\\siteimg\\common\\pdf_download.jpg")},
+    {"SNO": 2, "NAME": t('documents.items.matrimonyEnglish'), "FILEURL":  require("assets/docs/vaikhanasa_marriage_application_english.pdf"), "IMGURL": require("assets\\siteimg\\common\\pdf_download.jpg")}
 ];
 
-const downloadBooksList = [
-    {"SNO": 1, "NAME": "Vaikhanasa Pooja Vidhanam", "FILEURL":  require("assets/docs/PoojaVidhanam_Kalyaano_pdf_1.pdf"), "IMGURL": require("assets\\siteimg\\common\\pdf_download.jpg")},
-    {"SNO": 2, "NAME": "Vaikhanasalu Ante Evaru By Rompicherla Yogananda Acharyulu", "FILEURL":  require("assets/docs/Vaikhanasulu_ante_evaru.pdf"), "IMGURL": require("assets\\siteimg\\common\\pdf_download.jpg")}
+const getDownloadBooksList = (t) => [
+    {"SNO": 1, "NAME": t('documents.items.poojaVidhanam'), "FILEURL":  require("assets/docs/PoojaVidhanam_Kalyaano_pdf_1.pdf"), "IMGURL": require("assets\\siteimg\\common\\pdf_download.jpg")},
+    {"SNO": 2, "NAME": t('documents.items.vaikhanasaluAnte'), "FILEURL":  require("assets/docs/Vaikhanasulu_ante_evaru.pdf"), "IMGURL": require("assets\\siteimg\\common\\pdf_download.jpg")}
 ];
 
 function Documents() {
+  const { t } = useTranslation();
+  
+  const downloadApplicationsItemList = getDownloadApplicationsItemList(t);
+  const downloadBooksList = getDownloadBooksList(t);
+  
   return (
     <>
       <div className="cd-section" id="documents">
@@ -22,21 +28,20 @@ function Documents() {
           <Container>           
             <Row>
               <Col className="ml-auto mr-auto text-center" md="12">
-                <h2 className="title">Documents</h2>                
-                <h4>Following are the documents that can be downloaded :</h4>
+                <h2 className="title">{t('documents.title')}</h2>                
+                <h4>{t('documents.description')}</h4>
                     <p>
-                        All downloadable documents will be available here for free download here. <br/><br/>
-                        Users can make use of this service to download required documents / application forms / any circulars / or any other important announcements released for here
+                        {t('documents.info')}<br/><br/>{t('documents.usage')}
                     </p>                        
                     <br/>
                     <h4>
-                        APPLICATIONS
+                        {t('documents.applications')}
                     </h4>
                     <table id="downloadApplicationsTable" class="table table-bordered table-condensed table-hover table-striped">
                         <tr>
-                            <th>SNO</th>
-                            <th>NAME</th>                                
-                            <th>FILE</th>
+                            <th>{t('documents.tableHeaders.sno')}</th>
+                            <th>{t('documents.tableHeaders.name')}</th>                                
+                            <th>{t('documents.tableHeaders.file')}</th>
                         </tr>
                         {downloadApplicationsItemList.map((item, index) => (
                             <tr key={index}>                                
@@ -49,13 +54,13 @@ function Documents() {
                     </table> 
                     <br/>
                     <h4>
-                        OTHERS
+                        {t('documents.others')}
                     </h4>
                     <table id="downloadOthersTable" class="table table-bordered table-condensed table-hover table-striped">
                         <tr>
-                            <th>SNO</th>
-                            <th>NAME</th>                                
-                            <th>FILE</th>
+                            <th>{t('documents.tableHeaders.sno')}</th>
+                            <th>{t('documents.tableHeaders.name')}</th>                                
+                            <th>{t('documents.tableHeaders.file')}</th>
                         </tr>
                         {downloadBooksList.map((item, index) => (
                             <tr key={index}>                                

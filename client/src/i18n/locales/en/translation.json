@@ -1,0 +1,204 @@
+{
+  "homePage": {
+    "title": "Mana Vaikhanasam",    
+    "SriGuru": "Sri Gurubhyo Namaha",
+    "development": "Developed & Maintained By Seshu Rompicherla"
+  },
+  "nav": {
+    "home": "Home",
+    "photoGallery": "Photo Gallery",
+    "videoGallery": "Video Gallery",
+    "directory": "Directory",
+    "matrimony": "Matrimony",
+    "purohitas": "Purohitas",
+    "ashramam": "Ashramam",
+    "news": "News",
+    "contact": "Contact",
+    "documents": "Documents",
+    "books": "Books",
+    "vaikhanasaPrabha": "Vaikhanasa Prabha",
+    "svmm": "SVMM",
+    "svmmMembers": "SVMM Members",
+    "ashramamDonors": "Ashramam Donors",
+    "gallery": "Gallery",
+    "photos": "Photos",
+    "videos": "Videos",
+    "services": "Services",
+    "vaikhanasaPurohitulu": "Vaikhanasa Purohitulu",
+    "download": "Download",
+    "welfare": "Welfare",
+    "sriVaikhanasaMahaMandali": "Sri Vaikhanasa Maha Mandali",
+    "svmmWorkingCommittee": "SVMM Working Committee",
+    "contactUs": "Contact Us",
+    "hyderabadAshramam": "Hyderabad Ashramam",
+    "hyderabadAshramamDonors": "Hyderabad Ashramam Donors"
+  },
+  "photoGallery": {
+    "title": "Photo Gallery",
+    "description": "This is a page to view all the photos related to recent events held at different places.",
+    "kvs2023": {
+      "title": "Sri Vaikhanasa Maha Mandali, Hyderabad - Kartheeka Vana Samaradhana 2023",
+      "description": "The Kartheeka Vana Samaradhana program organized by Sri Vaikhanasa Maha Mandali, Hyderabad on 10/Dec/2023 at Sri Vikhanasa Ashram, Hyderabad. Mrs. Parasaram Indira and her Trilokya Arts Association students presented a beautiful dance performance."
+    },
+    "apyf2021": {
+      "title": "AP Youth Forum - 2021 Sravana Poornima Celebrations",
+      "description": "Under the auspices of Vaikhanasa Youth Forum Town Urban & Rural Branch, at Sri Dhanvantari Trust Building, the Nakshatra Mahotsavam of Hayagreeva Swami and Varsha Vardhana Homam were conducted magnificently. About 125 Vaikhanasa relatives participated and made this program successful."
+    },
+    "sp2019": {
+      "hyderabad": {
+        "title": "Sravana Poornima 2019 Celebrations",
+        "description": "Sri Vikhanasa Jayanti was celebrated grandly at Sri Vikhanasa Ashram in Hyderabad. On this occasion, Sri Vaikhanasa Maha Mandali, Hyderabad honored Sri Peddinti Venkata Lakshmi Narasimhacharyulu from Kapileshwarpur."
+      },
+      "vijayawada": {
+        "description": "Special guest Sri Agnihotram Atreyababu and his wife were honored by Vikhanasa Seva Sangham Vijayawada at Sri Venkateswara Swami temple in Labbipet, Vijayawada on the occasion of Sri Vikhanasa Jayanti."
+      },
+      "tenali": {
+        "description": "Sri Vaikhanasa Seva Sangham in Tenali celebrated Sri Swami Jayanti grandly. Vaikhanasa Agama scholar Sri Peddinti Anil Kumar was honored along with his wife."
+      },
+      "guntur": {
+        "description": "Sri Vaikhanasa Maha Mandali Guntur."
+      },
+      "uttarandhra": {
+        "description": "Vaikhanasa Sangham Vizag Uttar Andhra"
+      },
+      "nlr": {
+        "description": "Vaikhanasa Jayanti was celebrated grandly at Sri Lakshmi Narasimha Swami temple in Indukurupet, N.L.R. district."
+      },
+      "vizag": {
+        "description": "At the scholar honor assembly held on the occasion of Sravana Pournami 'Sri Vikhanasa Jayanti' in the divine presence of Vizag Sri Sarada Peeth managed Philinnagar, prominent Ayurveda physician Sri Ganjam Krishna Prasad was honored with the title 'Ayurveda Vaidya Vidvanmani'."
+      }
+    },
+    "sp2018": {
+      "hyderabad": {
+        "description": "Sri Vikhanasa Jayanti was celebrated grandly at Sri Vikhanasa Ashram in Hyderabad."
+      },
+      "guntur": {
+        "description": "Guntur Sri Vaikhanasa Maha Mandali"
+      }
+    },
+    "kvs2015": {
+      "hyderabad": {
+        "title": "Karteeka Vana Samaradhana 2015",
+        "description": "Kartheeka Vana Samaradhana celebrations at Sri Vikhanasa Ashram in Hyderabad."
+      }
+    },
+    "sp2015": {
+      "hyderabad": {
+        "title": "Sravana Poornima 2015",
+        "description": "Sravana Pournima 2015 - First function at our Sri Vikhanasa Ashramam, Hyderabad"
+      }
+    },
+    "vpv2016": {
+      "hyderabad": {
+        "title": "Vaikhanasa Vivaha Paricheya Vedika",
+        "description": "Vaikhanasa Vivaha Paricheya Vedika - at our Sri Vikhanasa Ashramam, Hyderabad"
+      },
+      "rajamundry": {
+        "description": "Vaikhanasa Vivaha Paricheya Vedika 3 - at Rajahmundry"
+      }
+    }
+  },
+  "videoGallery": {
+    "title": "Video Gallery",
+    "description": "View all the videos.",
+    "aboutVaikhanasa": "About Vaikhanasa Agama",
+    "sthotraPatham": "About Vaikhanasa Sthotra Patham"
+  },
+  "common": {
+    "loading": "Loading...",
+    "loadMore": "Load More Photos",
+    "close": "Close",
+    "english": "English",
+    "telugu": "Telugu",
+    "changeLanguage": "Change Language"
+  },
+  "books": {
+    "title": "Books",
+    "description": "There are some books available on Vaikhanasa Agamam at \"Sri Priya Book Center\", Miyapur, Hyderabad",
+    "altText": "Sri Priya Book Center",
+    "purchaseInfo": "Below are the list of books available for purchase and for latest availability please scan the QR code above or call the number mentioned above."
+  },
+  "ashramam": {
+    "title": "Sri Vikhanasa Ashramam, Hyderabad",
+    "category": "Sri Vikhanasa Ashramam @ Hyderabad",
+    "description": "Sri Vikhanasa Ashramam is being built at Plot # 205, P&T colony, Kakatiya Hospital Road, Medipally, Hyderabad. This mile stone is getting achieved by all the support that we are receiving from our beloved vaikhanasa Bhandu's.",    
+    "location": "Location",
+    "imageAlt": "Sri Vikhanasa Ashramam Proposed Building"
+  },
+  "ashramamDonors": {
+    "title": "Sri Vaikhanasa Ashramam, Hyderabad - Donors List",
+    "description": "Following are the list of donors who helped us in realizing dream of building our own Sri Vaikhanasa Ashramam at Hyderabad.",
+    "bankDetails": "Following are the bank details for donating funds towards Ashramam Development",
+    "or": "or",
+    "qrCode": "now even we can scan the below QR Code to donate as well",
+    "accountName": "Name ",
+    "bankName": "Bank Name ",
+    "accountNumber": "A/C No ",
+    "ifscCode": "IFSC Code ",
+    "accountNameValue": "AP SRI VAIKHANASA MAHA MANDALI",
+    "bankNameValue": "Union Bank Of India, Peerzadiguda, Hyderabad",    
+    "itemsDonated": "Following are the items that are donated to Sri Vikhanasa Ashramam, Hyderabad.",
+    "gridHeaders": {
+      "sno": "Sno",
+      "name": "Name",
+      "place": "Place",
+      "amount": "Amount",
+      "date": "Date",
+      "receipt": "Receipt No.",
+      "item": "Item"
+    }
+  },
+  "directory": {
+    "title": "Vaikhanasa Directory",
+    "description": "Vaikhanasa Directory is the service to make information available regarding our vaikhanasas residing at different parts of this world. Please let us know the names of the persons not listed in this table through the feedback form available in contact page. We will make the best possible effort to include the names as early as posssible.",
+    "addDetails": "Please send the below details to get added into this list: Name (full name with surname), Gotram, Fathers Name, Native place, Phone, Email, Address, Profession, photo via email provided below @",
+    "email": "seshu.manavaikhanasam@gmail.com",
+    "gridHeaders": {
+      "sno": "Sno",
+      "name": "Name",
+      "father": "Father",
+      "gotram": "Gotram"
+    }
+  },
+  "svmm": {
+    "title": "Sri Vikhanasa Maha Mandali, Hyderabad",
+    "history": "The Andhra Pradesh Sri Vaikhanasa Maha Mandali, Hyderabad came into existence in 1975 with the initiation and blessings of Late.Sriman.Bhattar R. Partha Sarathi Iyengar, Tirupathi, to help and promote the welfare and unity among Vaikhanasas, particularly those living in and around Hyderabad.",
+    "platform": "This has provided a platform for the Vaikhanasa brothering in twin cities to improve the personal relations and work together for the welfare of the society. The Mandali has grown from strength to strength to the present state with a member ship greater than of 400, and celebrate silver jubilee function in year 2000.",
+    "growth": "The credit for the substantial growth of the mandali goes to all the presidents and EC members of the yester years starting from Late. Sri. Muttevi RamaKrishnama Charyulu. In the direction to reach the goal of the mandala, a piece of land was already purchased to construct the Vaikhanasa Ashramam and also Sri Venkateshwara Swamy temple, which is a significant achievement. I hope the support and cooperation of the members would continue to take the mandali activities to greater heights. The immediate goal for us is the construction of the Ashramam for which we seek help and involvement from all the members.",
+    "documentation": "Preparedness for a change towards the changing times is a sign of progress. In the present age of knowledge and information explosion, it is felt necessary to document the information about Vaikhanasas in the state and intended to begin with the twin cities members. A fragmentary work was done in this direction by some mandal level Vaikhanasa organization which is a commendable job. However, a uniform documentation of the state Vaikhanasas in the form of a comprehensive directory is highly desirable.",
+    "firstPresident": "Sri Vaikhanasa Maha Mandali First President",
+    "presidentName": "Late. Sriman Muthevi RamaKrishnama Charyulu",
+    "imageAlt": "Late. Sriman Muthevi RamaKrishnama Charyulu"
+  },
+  "svmmMembers": {
+    "title": "Sri Vikhanasa Maha Mandali Working Committee Members, Hyderabad",
+    "description": "Vaikhanasa Maha Mandali elects its governing body by elections and the elected body will be handling their roles and responsibilities.",
+    "currentCommittee": "Working Comittee 2024",
+    "committee2023": "Working Comittee Until 2023",
+    "committee2014": "2014-2016 Working Comittee",
+    "gridHeaders": {
+      "name": "Name",
+      "position": "Position",
+      "mobile": "Mobile"
+    }
+  },
+  "documents": {
+    "title": "Documents",
+    "description": "Following are the documents that can be downloaded :",
+    "info": "All downloadable documents will be available here for free download here.",
+    "usage": "Users can make use of this service to download required documents / application forms / any circulars / or any other important announcements released for here",
+    "applications": "APPLICATIONS",
+    "others": "OTHERS",
+    "tableHeaders": {
+      "sno": "SNO",
+      "name": "NAME",
+      "file": "FILE"
+    },
+    "items": {
+      "matrimonyTelugu": "Sri Vaikhanasa Maha Mandali Vivaha Paricheya Vedika Matrimony Application Form (Telugu)",
+      "matrimonyEnglish": "Sri Vaikhanasa Maha Mandali Vivaha Paricheya Vedika Matrimony Application Form (English)",
+      "poojaVidhanam": "Vaikhanasa Pooja Vidhanam",
+      "vaikhanasaluAnte": "Vaikhanasalu Ante Evaru By Rompicherla Yogananda Acharyulu"
+    }
+  }
+}

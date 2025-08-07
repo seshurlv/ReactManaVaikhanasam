@@ -1,4 +1,5 @@
 import React  from "react";
+import { useTranslation } from 'react-i18next';
 import ReactPlayer from "react-player";
 import video01 from "../../assets/videos/Sri_Vaikhanasam.mp4";
 import video02 from "../../assets/videos/Sri_Vikhanasa_Sthotra_Patham.mp4";
@@ -12,6 +13,7 @@ import {
   } from "reactstrap";
 
 function VideoGallery() {
+    const { t } = useTranslation();
       
     return (
       <>
@@ -20,9 +22,9 @@ function VideoGallery() {
             <Container>
               <Row>
                 <Col className="ml-auto mr-auto " md="12">
-                  <h2 className="title text-center">Video Gallery</h2> 
+                  <h2 className="title text-center">{t('videoGallery.title')}</h2> 
                   <h4 className="description">
-                    View all the videos.
+                    {t('videoGallery.description')}
                   </h4>
                 </Col>
               </Row>
@@ -37,7 +39,7 @@ function VideoGallery() {
                         />
                   </div>
                   <p>
-                    About Vaikhanasa Agama<br/><br/>                  
+                    {t('videoGallery.aboutVaikhanasa')}<br/><br/>                  
                   </p>                                     
                 </Col>
                 <Col className="ml-auto mr-auto" md="4">                                  
@@ -50,7 +52,7 @@ function VideoGallery() {
                         />
                   </div>
                   <p>
-                    Sri Vikhanasa Stotra Patham<br/><br/>                  
+                    {t('videoGallery.sthotraPatham')}<br/><br/>                  
                   </p>                                     
                 </Col>                
               </Row>    

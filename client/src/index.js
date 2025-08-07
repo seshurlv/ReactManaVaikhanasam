@@ -18,6 +18,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { HashRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 
+// i18n initialization
+import './i18n/i18n';
+
 // styles
 import "assets/css/bootstrap.min.css";
 import "assets/scss/now-ui-kit.scss?v=1.5.0";

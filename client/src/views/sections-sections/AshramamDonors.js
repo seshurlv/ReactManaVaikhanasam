@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 import ReactDataGrid from '@inovua/reactdatagrid-community';
 import '@inovua/reactdatagrid-community/index.css';
@@ -2424,6 +2425,8 @@ const itemsDonorsList = [
     ];
 
 function AshramamDonors() {
+  const { t } = useTranslation();
+  
   return (
     <>
       <div className="cd-section" id="ashramamdonors">
@@ -2431,20 +2434,20 @@ function AshramamDonors() {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="12">
-                <h2 className="title">Sri Vaikhanasa Ashramam, Hyderabad - Donors List</h2>
+                <h2 className="title">{t('ashramamDonors.title')}</h2>
                 <h4>
-                  Following are the list of donors who helped us in realizing dream of building our own “Sri Vaikhanasa Ashramam” at Hyderabad.
+                  {t('ashramamDonors.description')}
                   <br/><br/>
-                    Following are the bank details for donating funds towards Ashramam Development 
-                    <br/>or<br/>
-                    now even we can scan the below QR Code to donate as well<br/><br/>
+                    {t('ashramamDonors.bankDetails')}
+                    <br/>{t('ashramamDonors.or')}<br/>
+                    {t('ashramamDonors.qrCode')}
                   <br/>
                   <div className="accountDetails doners-container">
                     <div className="accountDetails">
-                        <b>Name : </b> AP SRI VAIKHANASA MAHA MANDALI<br/>
-                        <b>Bank Name : </b> Union Bank Of India, Peerzadiguda, Hyderabad<br/>
-                        <b>A/C No : </b> 087310011016775 <br />
-                        <b>IFSC Code : </b> UBIN0811807<br/>
+                        <b>{t('ashramamDonors.accountName')} : </b> {t('ashramamDonors.accountNameValue')}<br/>
+                        <b>{t('ashramamDonors.bankName')} : </b> {t('ashramamDonors.bankNameValue')}<br/>
+                        <b>{t('ashramamDonors.accountNumber')} : </b> 087310011016775<br/>
+                        <b>{t('ashramamDonors.ifscCode')} : </b>  UBIN0811807<br/>
                     </div>                
                     <div className="vertical-line"></div> {/* Add this line for vertical line */}
                     <div className="accountDetails">
@@ -2466,7 +2469,7 @@ function AshramamDonors() {
               <Col className="ml-auto mr-auto text-center" md="12">
                 <br/><br/>                
                 <h4>
-                  Following are the items that are donated to Sri Vikhanasa Ashramam, Hyderabad.
+                  {t('ashramamDonors.itemsDonated')}
                 </h4>
                 <ReactDataGrid
                   idProperty="id"
