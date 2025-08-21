@@ -18,6 +18,7 @@ jobs:
           node-version: 18  # or the version your React app uses
 
       - name: Install dependencies
+        working-directory: ./client
         run: npm install
 
       - name: Build React app
