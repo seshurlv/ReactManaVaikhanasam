@@ -80,3 +80,21 @@ th {
   }
   
   
+/* PWA Styles */
+.install-prompt {
+  position: fixed;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1050;
+  max-width: 400px;
+  width: 90%;
+  margin: 0;
+}
+
+@media (display-mode: standalone) {
+  /* Styles when app is installed */
+  .navbar {
+    padding-top: env(safe-area-inset-top);
+  }
+}

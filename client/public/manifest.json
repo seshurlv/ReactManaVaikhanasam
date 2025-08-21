@@ -1,15 +1,25 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Mana Vaikhanasam",
+  "name": "Mana Vaikhanasam - Vaikhanasa Community Portal",
+  "description": "Complete portal for Vaikhanasa community with services, gallery, and resources",  
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "acharya.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "apple-icon.png", 
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "display": "standalone",  
+  "theme_color": "#2CA8FF",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "categories": ["spiritual", "social", "education", "community"],
+  "lang": "en"
 }
