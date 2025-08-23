@@ -45,30 +45,8 @@ function PresentationHeader() {
         <h3 className="h3-description rellax-text" data-rellax-speed="-1">
           {t('homePage.SriGuru')}
         </h3>
-        <h6
-          className="category category-absolute rellax-text"
-          data-rellax-speed="-1"
-        >
+        <h6 className="category category-absolute rellax-text" data-rellax-speed="-1">
           {t('homePage.development')}
-          {/* <a href="http://invisionapp.com/?ref=creativetim" target="_blank">
-            <img
-              alt="..."
-              className="invision-logo"
-              src={require("assets/img/invision-white-slim.png")}
-            ></img>
-          </a> */}
-          {/* . Coded by{" "}
-          <a
-            href="https://www.creative-tim.com?ref=nuk-pro-react-presentation-header"
-            target="_blank"
-          >
-            <img
-              alt="..."
-              className="creative-tim-logo"
-              src={require("assets/img/creative-tim-white-slim2.png")}
-            ></img>
-          </a>
-          . */}
         </h6>
       </div>
     </>
