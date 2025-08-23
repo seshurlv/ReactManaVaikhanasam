@@ -63,7 +63,7 @@ function News() {
                     </Col>
                     <Col md="12">
                       <div>
-                        <object data={require("../../assets/siteimg/news/Sravana_Poornima_09_08_2025.pdf")} type="application/pdf" width="100%" height="900px">
+                        <object data={"/assets/docs/Sravana_Poornima_09_08_2025.pdf"} type="application/pdf" width="100%" height="900px">
                           <p>Invitation for Sravana Poornima - 2025</p>
                         </object>                                          
                       </div>
