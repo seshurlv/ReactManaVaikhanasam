@@ -1,8 +1,6 @@
 const CACHE_NAME = 'mana-vaikhanasam-v1';
 const urlsToCache = [
-  '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
+  '/', 
   '/manifest.json',
   '/acharya.png',
   '/apple-icon.png'
@@ -12,7 +10,15 @@ const urlsToCache = [
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(urlsToCache))
+      .then((cache) => Promise.all(
+        urlsToCache.map(url =>
+          fetch(url)
+            .then(response => {
+              if (response.ok) return cache.put(url, response);
+            })
+            .catch(() => { /* ignore failed requests */ })
+        )
+      ))
   );
 });
 
