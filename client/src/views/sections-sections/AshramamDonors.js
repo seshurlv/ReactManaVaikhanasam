@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import ReactDataGrid from '@inovua/reactdatagrid-community';
 import '@inovua/reactdatagrid-community/index.css';
-import qrCodeImage from 'assets/QRCode/APSriVaikhanasaMahaMandali_QRScan_New.jpg';
+import qrCodeImage from 'assets/QRCode/APSriVaikhanasaMahaMandali_QRScan_Details_New.jpg';
 
 // reactstrap components
 import {  
