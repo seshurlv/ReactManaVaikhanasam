@@ -104,7 +104,7 @@ function Contact() {
         <div
           className="testimonials-1 section-image"
           style={{
-            backgroundImage: "url(" + ("assets/siteimg/namam01.jpg") + ")"
+            backgroundImage: "url(assets/siteimg/namam01.jpg)"
           }}
         >
           <Container>
@@ -121,7 +121,7 @@ function Contact() {
                       <img
                         alt="..."
                         className="img img-raised"
-                        src={("assets/siteimg/seshu.jpg")}
+                        src={"assets/siteimg/seshu.jpg"}
                       ></img>
                     </a>
                   </div>

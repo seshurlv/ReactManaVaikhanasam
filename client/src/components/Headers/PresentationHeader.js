@@ -17,9 +17,7 @@ function PresentationHeader() {
             className="page-header-image"
             style={{
               backgroundImage:
-                "url(" +
-                require("assets/img/presentation-page/nuk-pro-back-sky.jpg") +
-                ")"
+                "url(/assets/img/presentation-page/nuk-pro-back-sky.jpg)"
             }}
           ></div>
         </div>
@@ -31,9 +29,7 @@ function PresentationHeader() {
             className="page-header-image page-header-city"
             style={{
               backgroundImage:
-                "url(" +
-                ("assets/siteimg/Sri_Vikhanasa_Maharishi.webp") +
-                ")"
+                "url(/assets/siteimg/Sri_Vikhanasa_Maharishi.webp)"
             }}
           ></div>
         </div>
