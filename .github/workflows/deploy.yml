@@ -33,3 +33,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /manavaikhanasam.com/   # replace with your directory
           local-dir: ./client/build/
+          protocol: ftp
+          dangerous-clean-slate: false 
