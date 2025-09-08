@@ -6,13 +6,13 @@ import "@inovua/reactdatagrid-community/index.css";
 import { Container, Row, Col } from "reactstrap";
 
 const getDownloadApplicationsItemList = (t) => [
-    {"SNO": 1, "NAME": t('documents.items.matrimonyTelugu'), "FILEURL":  require("assets/docs/vaikhanasa_marriage_application_telugu.pdf"), "IMGURL": require("assets/siteimg/common/pdf_download.jpg")},
-    {"SNO": 2, "NAME": t('documents.items.matrimonyEnglish'), "FILEURL":  require("assets/docs/vaikhanasa_marriage_application_english.pdf"), "IMGURL": require("assets/siteimg/common/pdf_download.jpg")}
+    {"SNO": 1, "NAME": t('documents.items.matrimonyTelugu'), "FILEURL":  require("assets/docs/vaikhanasa_marriage_application_telugu.pdf"), "IMGURL": ("assets/siteimg/common/pdf_download.jpg")},
+    {"SNO": 2, "NAME": t('documents.items.matrimonyEnglish'), "FILEURL":  require("assets/docs/vaikhanasa_marriage_application_english.pdf"), "IMGURL": ("assets/siteimg/common/pdf_download.jpg")}
 ];
 
 const getDownloadBooksList = (t) => [
-    {"SNO": 1, "NAME": t('documents.items.poojaVidhanam'), "FILEURL":  require("assets/docs/PoojaVidhanam_Kalyaano_pdf_1.pdf"), "IMGURL": require("assets/siteimg/common/pdf_download.jpg")},
-    {"SNO": 2, "NAME": t('documents.items.vaikhanasaluAnte'), "FILEURL":  require("assets/docs/Vaikhanasulu_ante_evaru.pdf"), "IMGURL": require("assets/siteimg/common/pdf_download.jpg")}
+    {"SNO": 1, "NAME": t('documents.items.poojaVidhanam'), "FILEURL":  require("assets/docs/PoojaVidhanam_Kalyaano_pdf_1.pdf"), "IMGURL": ("assets/siteimg/common/pdf_download.jpg")},
+    {"SNO": 2, "NAME": t('documents.items.vaikhanasaluAnte'), "FILEURL":  require("assets/docs/Vaikhanasulu_ante_evaru.pdf"), "IMGURL": ("assets/siteimg/common/pdf_download.jpg")}
 ];
 
 function Documents() {

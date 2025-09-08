@@ -1,6 +1,9 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
 
+// If the image is in the public/assets/siteimg/svmm folder, use this instead:
+// const image1 = process.env.PUBLIC_URL + "/assets/siteimg/svmm/Muttevi_Ramakrishnama_Charyulu.jpg";
+
 // reactstrap components
 import {  
   Card,
@@ -45,7 +48,7 @@ function Svmm() {
                         <img
                           alt={t('svmm.imageAlt')}
                           className="img img-raised rounded"
-                          src={require("assets/siteimg/svmm/Muttevi_Ramakrishnama_Charyulu.jpg")}
+                          src={"assets/siteimg/svmm/Muttevi_Ramakrishnama_Charyulu.jpg"}
                         ></img>
                       </div>
                     </Col>                    

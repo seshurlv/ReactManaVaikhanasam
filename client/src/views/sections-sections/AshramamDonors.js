@@ -2451,7 +2451,26 @@ function AshramamDonors() {
                     </div>                
                     <div className="vertical-line"></div> {/* Add this line for vertical line */}
                     <div className="accountDetails">
-                      <img alt="..." className="img img-raised rounded img-blog" src={qrCodeImage} />
+                      {/* <img alt="..." className="img img-raised rounded img-blog" src={qrCodeImage} /> */}
+                      <div style={{
+                        width: '200px',
+                        height: '200px',
+                        overflow: 'hidden',
+                        margin: '0 auto',
+                        borderRadius: '12px',
+                        boxShadow: '0 2px 8px rgba(0,0,0,0.15)'
+                      }}>
+                        <img
+                          src={qrCodeImage}
+                          alt="QR Code"
+                          style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: 'center' // adjust as needed
+                          }}
+                        />
+                      </div>
                     </div>                
                   </div>                  
                 </h4>

@@ -28,7 +28,7 @@ function VaikhanasaPrabha() {
             <img
               alt="..."
               className="img img-raised rounded responsive-img"              
-              src={require("assets/siteimg/prabha/Subscribe.jpg")}
+              src={("assets/siteimg/prabha/Subscribe.jpg")}
             ></img>
             <Row>
               <Col className="ml-auto mr-auto" md="12">

@@ -27,7 +27,7 @@ function News() {
                         <img
                           alt="..."
                           className="img img-raised rounded"
-                          src={require("assets/siteimg/acharya.jpg")}
+                          src={("assets/siteimg/acharya.jpg")}
                         ></img>
                       </div>
                     </Col>
