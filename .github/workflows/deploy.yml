@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout latest code
         uses: actions/checkout@v3
+        with:
+          lfs: true
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -24,6 +26,9 @@ jobs:
       - name: Build React app
         working-directory: ./client
         run: npm run build
+
+      - name: List build images for debugging
+        run: find ./client/build -type f -exec ls -lh {} \;
 
       - name: Deploy build folder to FTP server
         uses: SamKirkland/FTP-Deploy-Action@v4.3.0
