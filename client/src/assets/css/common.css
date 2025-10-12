@@ -98,3 +98,16 @@ th {
     padding-top: env(safe-area-inset-top);
   }
 }
+
+.mobile-overlay-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(34, 34, 34, 0.92);
+  z-index: 2000;
+  overflow-y: auto;
+  transition: all 0.3s;
+  padding-top: 70px;
+}

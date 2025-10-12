@@ -34,7 +34,7 @@ function PresentationHeader() {
           ></div>
         </div>
         <div className="rellax-text-container rellax-text">
-          <h1 className="h1-seo" style={{ height: "120px" }} data-rellax-speed="-1">
+          <h1 className="h1-seo" style={{ height: "160px" }} data-rellax-speed="-1">
             {t('homePage.title')}
           </h1>          
         </div>

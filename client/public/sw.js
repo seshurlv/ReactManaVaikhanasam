@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mana-vaikhanasam-v2';
+const CACHE_NAME = 'mana-vaikhanasam-v1';
 const urlsToCache = [
   '/', 
   '/manifest.json',

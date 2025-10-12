@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
+import proposed from "assets/img/hyderabad-ashramam/proposed.jpg";  
 
 // reactstrap components
 import {  
@@ -30,7 +31,7 @@ function Ashramam() {
                         <img
                           alt={t('ashramam.imageAlt')}
                           className="img img-raised rounded"
-                          src={require("assets/img/hyderabad-ashramam/proposed.jpg")}
+                          src={proposed}
                         ></img>
                       </div>
                     </Col>

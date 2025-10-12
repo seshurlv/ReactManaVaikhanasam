@@ -1,6 +1,6 @@
 /*eslint-disable*/
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher.js";
 
@@ -20,9 +20,16 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
-function WhiteNavbar() {
+function WhiteNavbar() {  
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   const { t } = useTranslation();
+  const location = useLocation();
+
+  React.useEffect(() => {
+    setCollapseOpen(false);
+    document.documentElement.classList.remove("nav-open");
+  }, [location]);
+
   return (
     <>
       {collapseOpen ? (
@@ -56,7 +63,7 @@ function WhiteNavbar() {
               <span className="navbar-toggler-bar bottom-bar"></span>
             </button>
           </div>
-          <Collapse isOpen={collapseOpen} navbar>
+          <Collapse isOpen={collapseOpen} navbar >
             <Nav className="ml-auto" id="ceva" navbar>
               <UncontrolledDropdown nav>
                 <DropdownToggle
@@ -89,11 +96,11 @@ function WhiteNavbar() {
                   <p>{t('nav.ashramam')}</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
-                  <DropdownItem to="/sections#ashramam" tag={Link}>
+                  <DropdownItem to="/sections#ashramam" tag={Link} >
                     <i className="now-ui-icons shopping_box"></i>
                     {t('nav.hyderabadAshramam')}
                   </DropdownItem>
-                  <DropdownItem to="/sections#ashramamdonors" tag={Link}>
+                  <DropdownItem to="/sections#ashramamdonors" tag={Link} >
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     {t('nav.hyderabadAshramamDonors')}
                   </DropdownItem>                  
@@ -116,11 +123,11 @@ function WhiteNavbar() {
                   <p>{t('nav.gallery')}</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
-                  <DropdownItem to="/sections#photogallery" tag={Link}>
+                  <DropdownItem to="/sections#photogallery" tag={Link} >
                     <i className="now-ui-icons shopping_box"></i>
                     {t('nav.photos')}
                   </DropdownItem>
-                  <DropdownItem to="/sections#videogallery" tag={Link}>
+                  <DropdownItem to="/sections#videogallery" tag={Link} >
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     {t('nav.videos')}
                   </DropdownItem>                  
@@ -143,23 +150,23 @@ function WhiteNavbar() {
                   <p>{t('nav.services')}</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
-                  <DropdownItem to="/sections#directory" tag={Link}>
+                  <DropdownItem to="/sections#directory" tag={Link} >
                     <i className="now-ui-icons shopping_box"></i>
                     {t('nav.directory')}
                   </DropdownItem>
-                  <DropdownItem to="/sections#matrimony" tag={Link}>
+                  <DropdownItem to="/sections#matrimony" tag={Link} >
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     {t('nav.matrimony')}
                   </DropdownItem> 
-                  <DropdownItem to="/sections#purohitas" tag={Link}>
+                  <DropdownItem to="/sections#purohitas" tag={Link} >
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     {t('nav.vaikhanasaPurohitulu')}
                   </DropdownItem>
-                  <DropdownItem to="/sections#vaikhanasaprabha" tag={Link}>
+                  <DropdownItem to="/sections#vaikhanasaprabha" tag={Link} >
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     {t('nav.vaikhanasaPrabha')}
                   </DropdownItem>    
-                  <DropdownItem to="/sections#books" tag={Link}>
+                  <DropdownItem to="/sections#books" tag={Link} >
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     {t('nav.books')}
                   </DropdownItem>            
@@ -182,23 +189,10 @@ function WhiteNavbar() {
                   <p>{t('nav.download')}</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
-                  <DropdownItem to="/sections#documents" tag={Link}>
+                  <DropdownItem to="/sections#documents" tag={Link} >
                     <i className="now-ui-icons shopping_box"></i>
                     {t('nav.documents')}
                   </DropdownItem>
-                 
-                  {/* <DropdownItem to="/sections#features" tag={Link}>
-                    <i className="now-ui-icons ui-2_settings-90"></i>
-                    Pravachanamulu
-                  </DropdownItem> 
-                  <DropdownItem to="/sections#features" tag={Link}>
-                    <i className="now-ui-icons ui-2_settings-90"></i>
-                    Stotramulu
-                  </DropdownItem>
-                  <DropdownItem to="/sections#features" tag={Link}>
-                    <i className="now-ui-icons ui-2_settings-90"></i>
-                    Keertanalu
-                  </DropdownItem> */}
                 </DropdownMenu>
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
@@ -221,11 +215,11 @@ function WhiteNavbar() {
                     <DropdownItem header>
                       <strong>{t('nav.svmm')}</strong>
                     </DropdownItem>
-                    <DropdownItem to="/sections#svmm" tag={Link}>
+                    <DropdownItem to="/sections#svmm" tag={Link} >
                       <i className="now-ui-icons shopping_box"></i>
                         {t('nav.sriVaikhanasaMahaMandali')}
                     </DropdownItem>
-                    <DropdownItem to="/sections#svmmmembers" tag={Link}>
+                    <DropdownItem to="/sections#svmmmembers" tag={Link} >
                       <i className="now-ui-icons ui-2_settings-90"></i>
                        {t('nav.svmmWorkingCommittee')}
                     </DropdownItem>
@@ -239,6 +233,7 @@ function WhiteNavbar() {
                   nav      
                   to="/sections#news"            
                   tag={Link}
+                  
                 >
                   <i
                     aria-hidden={true}
@@ -255,6 +250,7 @@ function WhiteNavbar() {
                   nav
                   to="/sections#contact"            
                   tag={Link}
+                  
                 >
                   <i
                     aria-hidden={true}

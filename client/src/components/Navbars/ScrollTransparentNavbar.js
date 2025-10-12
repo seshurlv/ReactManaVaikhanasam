@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher.js";
 
@@ -19,14 +19,23 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
-function ScrollTransparentNavbar() {
+function ScrollTransparentNavbar() {  
   const [collapseOpen, setCollapseOpen] = React.useState(false);
    const { t } = useTranslation();
+  const location = useLocation();
+
   const [navbarColor, setNavbarColor] = React.useState(
     (document.documentElement.scrollTop > 499 || document.body.scrollTop) > 499
       ? ""
       : " navbar-transparent"
   );
+
+  // Close collapse on route change
+  React.useEffect(() => {
+    setCollapseOpen(false);
+    document.documentElement.classList.remove("nav-open");
+  }, [location]);
+
   // const [buyButtonColor, setBuyButtonColor] = React.useState(
   //   (document.documentElement.scrollTop > 499 || document.body.scrollTop) > 499
   //     ? "info"
@@ -278,7 +287,7 @@ function ScrollTransparentNavbar() {
                     id="navbarDropdownMenuLink"
                     nav      
                     to="/sections#news"            
-                    tag={Link}
+                    tag={Link}                    
                   >
                     <i
                       aria-hidden={true}
@@ -294,7 +303,7 @@ function ScrollTransparentNavbar() {
                   id="navbarDropdownMenuLink"
                   nav
                   to="/sections#contact"            
-                  tag={Link}
+                  tag={Link}                  
                 >
                   <i
                     aria-hidden={true}

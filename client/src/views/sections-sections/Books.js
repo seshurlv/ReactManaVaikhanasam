@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 //import ReactDataGrid from "@inovua/reactdatagrid-community";
 import "@inovua/reactdatagrid-community/index.css";
+import bookscentre from "assets/docs/sri-priya-books-centre.jpg";
 
 // reactstrap components
 import { Container, Row, Col } from "reactstrap";
@@ -20,7 +21,7 @@ function Books() {
                 <h4>{t('books.description')}</h4>
                 <br/>
                 <Col md="6" className="ml-auto mr-auto">
-                  <img alt={t('books.altText')} src={require("assets/docs/sri-priya-books-centre.jpg")} style={{width: '100%', height: 'auto'}} />
+                  <img alt={t('books.altText')} src={bookscentre} style={{width: '100%', height: 'auto'}} />
                 </Col>                
                 <br/>
                 <h4>{t('books.purchaseInfo')}</h4>
