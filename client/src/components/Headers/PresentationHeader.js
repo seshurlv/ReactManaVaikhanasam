@@ -8,16 +8,20 @@ import { useTranslation } from 'react-i18next';
 // core components
 
 function PresentationHeader() {
-   const { t } = useTranslation();
+  const { t } = useTranslation();
+  const isMobile = window.innerWidth < 768;
+  const bgImage = isMobile 
+    ? "url(/assets/siteimg/Sri_Vikhanasa_Maharishi_mobile.webp)"  // Smaller mobile version
+    : "url(/assets/siteimg/Sri_Vikhanasa_Maharishi.webp)"; 
+  
   return (
     <>
       <div className="page-header clear-filter">
         <div className="rellax-header rellax-header-sky" data-rellax-speed="-4">
           <div
-            className="page-header-image"
+            className="page-header-image page-header-city"
             style={{
-              backgroundImage:
-                "url(/assets/img/presentation-page/nuk-pro-back-sky.jpg)"
+              backgroundImage: bgImage
             }}
           ></div>
         </div>

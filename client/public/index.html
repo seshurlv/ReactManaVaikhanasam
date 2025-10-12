@@ -21,8 +21,8 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="%PUBLIC_URL%/acharya.png" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/acharya.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/acharya.png" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#000000" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -61,21 +61,51 @@
     <!-- iOS Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/acharya.png">
-    <style>
-      .h1-seo {
-        /* Copy your h1-seo styles here for immediate rendering */
-        font-size: 3rem;
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"></noscript>
+    
+
+    <style>    
+      #critical-lcp {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem; /* Smaller for mobile */
         font-weight: bold;
         color: white;
-        height: 160px;
+        z-index: 1000;
+        text-align: center;
+        padding: 0 20px;
+        width: 90%;
+        box-sizing: border-box;
+      }
+
+      .h1-seo {
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+        height: 120px; /* Smaller height for mobile */
+        text-align: center;
+      }
+
+      /* Desktop styles */
+      @media (min-width: 768px) {
+        #critical-lcp {
+          font-size: 3rem;
+        }
+        .h1-seo {
+          font-size: 3rem;
+          height: 160px;
+        }
       }
     </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    
-    <!-- Critical LCP content - visible immediately -->
-    <div id="critical-lcp" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3rem; font-weight: bold; color: white; z-index: 1000;">
+        
+    <!-- Critical LCP content - mobile optimized -->
+    <div id="critical-lcp" style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); font-size: 2rem; font-weight: bold; color: white; z-index: 1000; text-align: center; padding: 0 20px; max-width: 90vw;">
       MANA VAIKHANASAM
     </div>
 
