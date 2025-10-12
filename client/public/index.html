@@ -61,10 +61,35 @@
     <!-- iOS Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/acharya.png">
+    <style>
+      .h1-seo {
+        /* Copy your h1-seo styles here for immediate rendering */
+        font-size: 3rem;
+        font-weight: bold;
+        color: white;
+        height: 160px;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <!-- Critical LCP content - visible immediately -->
+    <div id="critical-lcp" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3rem; font-weight: bold; color: white; z-index: 1000;">
+      MANA VAIKHANASAM
+    </div>
+
     <div id="root"></div>
+
+    <script>
+      // Hide critical content once React loads
+      window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+          const critical = document.getElementById('critical-lcp');
+          if (critical) critical.style.display = 'none';
+        }, 100);
+      });
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
