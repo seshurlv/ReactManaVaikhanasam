@@ -8,25 +8,6 @@ import ScrollTransparentNavbar from "components/Navbars/ScrollTransparentNavbar.
 import PresentationHeader from "components/Headers/PresentationHeader.js";
 // import FooterBlack from "components/Footers/FooterBlack.js";
 
-// sections for this page
-// import Components from "./presentation-sections/Components.js";
-// import BasicComponents from "./presentation-sections/BasicComponents.js";
-// import Cards from "./presentation-sections/Cards.js";
-// import Content from "./presentation-sections/Content.js";
-// import Sections from "./presentation-sections/Sections.js";
-// import Examples from "./presentation-sections/Examples.js";
-// import FreeDemo from "./presentation-sections/FreeDemo.js";
-// import Icons from "./presentation-sections/Icons.js";
-// import Image from "./presentation-sections/Image.js";
-// import Testimonials from "./presentation-sections/Testimonials.js";
-// import Pricing from "./presentation-sections/Pricing.js";
-//import Ashramam from "./presentation-sections/Ashramam.js";
-// import Directory from "./sections-sections/Directory.js";
-// import Matrimony from "./sections-sections/Matrimony.js";
-// import Purohitas from "./sections-sections/Purohitas.js";
-// import News from "./sections-sections/News.js";
-// import Contact from "./sections-sections/Contact.js";
-
 function Presentation() {
   React.useEffect(() => {
     document.body.classList.add("presentation-page");
@@ -60,29 +41,12 @@ function Presentation() {
       script.parentNode.removeChild(script);
     };
   });
+
   return (
     <>
       <ScrollTransparentNavbar />
       <div className="wrapper">
-        <PresentationHeader />
-        {/* <Components /> 
-        <BasicComponents />
-        <Cards />
-        <Content />
-        <Sections />
-        <Examples />
-        <FreeDemo />
-        <Icons />
-        <Image />
-        <Testimonials />
-        <Pricing />
-        <FooterBlack />
-        <Directory />        
-        <Matrimony />                
-        <Purohitas />
-        <News />        
-        <Contact />*/}
-        
+        <PresentationHeader />        
       </div>
     </>
   );

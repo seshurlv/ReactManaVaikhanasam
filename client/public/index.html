@@ -1,21 +1,3 @@
-<!--
-/*!
-
-=========================================================
-* Now UI Kit PRO React - v1.5.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/now-ui-kit-pro-react
-* Copyright 2022 Creative Tim (http://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
--->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -57,6 +39,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Mana Vaikhanasam">
+    <meta http-equiv="Permissions-Policy" content="fullscreen=*">
     
     <!-- iOS Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-icon.png">
@@ -64,40 +47,45 @@
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"></noscript>
     
-
-    <style>    
+<!-- Critical CSS inline for mobile LCP -->
+    <style>
       #critical-lcp {
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 2rem; /* Smaller for mobile */
+        font-size: 2rem;
         font-weight: bold;
         color: white;
         z-index: 1000;
         text-align: center;
         padding: 0 20px;
-        width: 90%;
-        box-sizing: border-box;
+        max-width: 90vw;
+      }
+
+      .lcp-fallback {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        z-index: 1000;
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
       }
 
       .h1-seo {
         font-size: 2rem;
         font-weight: bold;
         color: white;
-        height: 120px; /* Smaller height for mobile */
+        height: 120px;
         text-align: center;
       }
-
-      /* Desktop styles */
       @media (min-width: 768px) {
-        #critical-lcp {
-          font-size: 3rem;
-        }
-        .h1-seo {
-          font-size: 3rem;
-          height: 160px;
-        }
+        #critical-lcp { font-size: 3rem; }
+        .h1-seo { font-size: 3rem; height: 160px; }
       }
     </style>
   </head>
@@ -105,7 +93,7 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
         
     <!-- Critical LCP content - mobile optimized -->
-    <div id="critical-lcp" style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); font-size: 2rem; font-weight: bold; color: white; z-index: 1000; text-align: center; padding: 0 20px; max-width: 90vw;">
+    <div id="critical-lcp">
       MANA VAIKHANASAM
     </div>
 

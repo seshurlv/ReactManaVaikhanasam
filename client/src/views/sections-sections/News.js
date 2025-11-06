@@ -1,5 +1,6 @@
 import React from "react";
-
+import ReactPlayer from "react-player";
+import video02 from "../../assets/videos/News/VYF KartheekaVanasamaradhana Invitation.mp4";
 
 // reactstrap components
 import {  
@@ -32,44 +33,51 @@ function News() {
                       </div>
                     </Col>
                     <Col md="7">
-                      <h6 className="category text-info mt-3">Sravana poornima - 2025</h6>
+                      <h6 className="category text-info mt-3">VYF & Vedcon KartheekaVanaSamaradhana, Hyderabad - 2025</h6>
                       <CardTitle tag="h3">
                         <h6>
-                          Sravana Poornima Sri Vikhanasa Swamy Jayanthi Mahotsavam - 2025
+                          Kartheeka Vana Samaradhana by Vaikhanasa Youth Forum and Vedcon Trust - 2025
                         </h6>
                       </CardTitle>
                       <p className="card-description">
-                        Dear Vikhanasa Bandu's, This year Sravana Poornima Sri Vikhanasa Acharya Swamy vari Jayanthi Mahotsavam will be conducted at 
-                        Sri Vikhanasa Ashramam, Plotno.205, P&T colony, Kakatiya Hospital road, Medipally, Hyderabad by our Sri Vaikhanasa Maha Mandali on 09/Aug/2025 (Saturday).
+                        Dear Vikhanasa Bandu's, 
+                        This year Kartheeka Vana Samaradhana by Vaikhanasa Youth Forum and Vedcon Trust will be conducted on 09/Nov/2025 (Sunday) :
+                        <br />
+                          📍 <b>Venue:</b> Sri Venkateswara Swamy Temple, Chandanagar <a href="https://maps.app.goo.gl/91XaMo6sSsHpGCPz6" target="_blank" rel="noopener noreferrer" style={{color: '#007bff', textDecoration: 'none', fontWeight: 'bold'}}>
+                              View on Google Maps
+                        </a>
+                        <br />
+                          📅 Date: Sunday, 09/Nov/2025
+                        <br />
+                          🕗 Time: 8:00 AM to 4:00 PM
                         <br /><br />
-                        Also Sravana Upakarma will be performed for the new vatus. To register for upakarma please contact the following numbers before 01/08/2025:
-                        <br />
-                        <ul>  
-                          <li>Sampara Raghu Kumar        - 94406 35800</li>
-                          <li>Rompicherla Seshu Kumar    - 99599 33822</li>
-                        </ul>
-                        <br />                        
-                        <br />
                         We welcome all our beloved vaikhanasa bandhu's to do join this event and make it a grand success.
                       </p>
                       <p className="author">
-                        09/Aug/2025
-                      </p>
-                      <p>
-                        <strong>Location:</strong> <a href="https://maps.google.com/?q=Sri+Vikhanasa+Ashramam,+Plot+no.205,+P%26T+Colony,+Kakatiya+Hospital+Road,+Medipally,+Hyderabad" target="_blank" rel="noopener noreferrer" style={{color: '#007bff', textDecoration: 'none', fontWeight: 'bold'}}>
-                          📍 View on Google Maps
-                        </a>
-                      </p>
+                        09/Nov/2025
+                      </p>                      
                     </Col>
+                    <Col className="ml-auto mr-auto" md="12">                                  
+                        <div>
+                            <ReactPlayer                        
+                                url= {video02}
+                                width='100%'
+                                height='100%'
+                                controls = {true}
+                            />
+                      </div>  
+                      <br/><br />                                                         
+                    </Col>                    
                     <Col md="12">
                       <div>
-                        <object data={"/assets/docs/Sravana_Poornima_09_08_2025.pdf"} type="application/pdf" width="100%" height="900px">
-                          <p>Invitation for Sravana Poornima - 2025</p>
+                        <object data={"/assets/News/Vedcon-KartheekaVanaSamaradhana-Pamphlet-2025.pdf"} type="application/pdf" width="100%" height="900px">
+                          <p>Invitation for KartheekaVanaSamaradhana - 2025</p>
                         </object>                                          
                       </div>
                     </Col>
                   </Row>
-                </Card> 
+                </Card>
+                <br></br>                
                 {/* <Card className="card-plain card-blog">
                   <Row>
                     <Col md="7">

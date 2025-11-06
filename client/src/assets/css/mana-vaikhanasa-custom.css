@@ -1,0 +1,69 @@
+/**
+ * ManaVaikhanasam Community Portal - Custom Styles
+ * Custom styling to distinguish from generic templates
+ */
+
+/* Login Page Customizations */
+.mana-vaikhanasa-bg {
+  opacity: 0.8;
+  background-size: cover;
+  background-position: center;
+}
+
+.mana-vaikhanasa-logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #51cbce;
+  margin-bottom: 15px;
+}
+
+.devotee-login-input {
+  border-left: 3px solid #ff9500 !important;
+}
+
+.devotee-password-input {
+  border-left: 3px solid #ff6347 !important;
+}
+
+.devotee-login-btn {
+  background: linear-gradient(45deg, #ff9500, #ff6347);
+  border: none;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.devotee-register-link,
+.community-help-link {
+  color: #ff9500 !important;
+  font-weight: 500;
+}
+
+.devotee-register-link:hover,
+.community-help-link:hover {
+  color: #ff6347 !important;
+  text-decoration: none;
+}
+
+/* Community Portal Branding */
+.community-portal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Sanskrit/Hindi Text Styling */
+.sanskrit-text {
+  font-family: 'Devanagari', 'Noto Sans Devanagari', serif;
+  font-weight: 500;
+}
+
+/* Responsive Community Features */
+@media (max-width: 768px) {
+  .mana-vaikhanasa-logo img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .devotee-login-btn {
+    font-size: 14px;
+  }
+}

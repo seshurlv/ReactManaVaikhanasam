@@ -37,38 +37,46 @@ function Documents() {
                     <h4>
                         {t('documents.applications')}
                     </h4>
-                    <table id="downloadApplicationsTable" class="table table-bordered table-condensed table-hover table-striped">
-                        <tr>
-                            <th>{t('documents.tableHeaders.sno')}</th>
-                            <th>{t('documents.tableHeaders.name')}</th>                                
-                            <th>{t('documents.tableHeaders.file')}</th>
-                        </tr>
-                        {downloadApplicationsItemList.map((item, index) => (
-                            <tr key={index}>                                
-                                <td class='dataColumnStyle textCenter'>{item.SNO}</td>  
-                                <td class='dataColumnStyle'>{item.NAME}</td>
-                                <td class='dataColumnStyle textCenter tdDownloadImageColumn'><a class='cursorPointer' href={item.FILEURL} download><img alt="" src={item.IMGURL}/></a></td>
+                    <table id="downloadApplicationsTable" className="table table-bordered table-condensed table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>{t('documents.tableHeaders.sno')}</th>
+                                <th>{t('documents.tableHeaders.name')}</th>                                
+                                <th>{t('documents.tableHeaders.file')}</th>
                             </tr>
-                        ))}
-                        
+                        </thead>
+                        <tbody>
+                            {downloadApplicationsItemList.map((item, index) => (
+
+                                <tr key={index}>                                
+                                    <td class='dataColumnStyle textCenter'>{item.SNO}</td>  
+                                    <td class='dataColumnStyle'>{item.NAME}</td>
+                                    <td class='dataColumnStyle textCenter tdDownloadImageColumn'><a class='cursorPointer' href={item.FILEURL} download><img alt="" src={item.IMGURL}/></a></td>
+                                </tr>
+                            ))}
+                        </tbody>
                     </table> 
                     <br/>
                     <h4>
                         {t('documents.others')}
                     </h4>
                     <table id="downloadOthersTable" class="table table-bordered table-condensed table-hover table-striped">
-                        <tr>
-                            <th>{t('documents.tableHeaders.sno')}</th>
-                            <th>{t('documents.tableHeaders.name')}</th>                                
-                            <th>{t('documents.tableHeaders.file')}</th>
-                        </tr>
-                        {downloadBooksList.map((item, index) => (
-                            <tr key={index}>                                
-                                <td class='dataColumnStyle textCenter'>{item.SNO}</td>  
-                                <td class='dataColumnStyle'>{item.NAME}</td>
-                                <td class='dataColumnStyle textCenter tdDownloadImageColumn'><a class='cursorPointer' href={item.FILEURL} download><img alt="" src={item.IMGURL}/></a></td>
+                        <thead>
+                            <tr>
+                                <th>{t('documents.tableHeaders.sno')}</th>
+                                <th>{t('documents.tableHeaders.name')}</th>                                
+                                <th>{t('documents.tableHeaders.file')}</th>
                             </tr>
-                        ))}
+                        </thead>
+                        <tbody>
+                            {downloadBooksList.map((item, index) => (
+                                <tr key={index}>                                
+                                    <td class='dataColumnStyle textCenter'>{item.SNO}</td>  
+                                    <td class='dataColumnStyle'>{item.NAME}</td>
+                                    <td class='dataColumnStyle textCenter tdDownloadImageColumn'><a class='cursorPointer' href={item.FILEURL} download><img alt="" src={item.IMGURL}/></a></td>
+                                </tr>
+                            ))}
+                        </tbody>
                     </table> 
                 </Col>
             </Row>
