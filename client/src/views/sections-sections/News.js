@@ -33,6 +33,53 @@ function News() {
                       </div>
                     </Col>
                     <Col md="7">
+                      <h6 className="category text-info mt-3">AP Sri Vaikhanasa Mahamandali KartheekaVanaSamaradhana, Hyderabad - 2025</h6>
+                      <CardTitle tag="h3">
+                        <h6>
+                          Kartheeka Vana Samaradhana by AP Sri Vaikhanasa Maha Mandali - 2025
+                        </h6>
+                      </CardTitle>
+                      <p className="card-description">
+                        Dear Vikhanasa Bandu's, 
+                        This year Kartheeka Vana Samaradhana by AP Sri Vaikhanasa Maha Mandali will be conducted on 16/Nov/2025 (Sunday) :
+                        <br /><br/>
+                          📍 <b>Venue:</b> Sri Vikhanasa Ashramam, Road no. 2, P&T Colony, Kakateeya Hospital Road, Medipally, Hyderabad-39<a href="https://maps.app.goo.gl/Hqs3BNsSaqGc8SXT7" target="_blank" rel="noopener noreferrer" style={{color: '#007bff', textDecoration: 'none', fontWeight: 'bold'}}>
+                              <br/>
+                              View on Google Maps
+                        </a>
+                        <br />
+                          📅 Date: Sunday, 16/Nov/2025
+                        <br />
+                          🕗 Time: 9:00 AM to 4:00 PM
+                        <br /><br />
+                        We welcome all our beloved vaikhanasa bandhu's to do join this event and make it a grand success.
+                      </p>
+                      <p className="author">
+                        16/Nov/2025
+                      </p>                      
+                    </Col>                                
+                    <Col md="12">
+                      <div>
+                        <object data={"/assets/News/VMM-Karthika-Samaradhana-2025.pdf"} type="application/pdf" width="100%" height="900px">
+                          <p>Invitation for KartheekaVanaSamaradhana - 2025</p>
+                        </object>                                          
+                      </div>
+                    </Col>
+                  </Row>
+                </Card>
+                <br></br>
+                <Card className="card-plain card-blog">
+                  <Row>
+                    <Col md="5">
+                      <div className="card-image">
+                        <img
+                          alt="..."
+                          className="img img-raised rounded"
+                          src={("assets/siteimg/acharya.jpg")}
+                        ></img>
+                      </div>
+                    </Col>
+                    <Col md="7">
                       <h6 className="category text-info mt-3">VYF & Vedcon KartheekaVanaSamaradhana, Hyderabad - 2025</h6>
                       <CardTitle tag="h3">
                         <h6>

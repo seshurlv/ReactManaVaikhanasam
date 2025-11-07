@@ -7,7 +7,7 @@
     color: $black-color;
     height: auto;
     line-height: normal;
-    font-size: $font-size-small;
+    font-size: $font-size-base;
     @include transition-input-focus-color();
     @include box-shadow(none);
 
