@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 // reactstrap components
 import {
@@ -17,13 +18,11 @@ import {
   Row
 } from "reactstrap";
 
-// core components
-import DropdownScrollNavbar from "components/Navbars/DropdownScrollNavbar.js";
-import Footer from "components/Footers/Footer.js";
-
+// ManaVaikhanasam specific login component
 function LoginPage() {
+  const history = useHistory();
   const [firstFocus, setFirstFocus] = React.useState(false);
-  const [lastFocus, setLastFocus] = React.useState(false);
+  const [passwordFocus, setPasswordFocus] = React.useState(false);
   React.useEffect(() => {
     document.body.classList.add("login-page");
     document.body.classList.add("sidebar-collapse");
@@ -37,7 +36,29 @@ function LoginPage() {
   }, []);
   return (
     <>
-      <DropdownScrollNavbar />
+      {/* Back Arrow Button */}
+      <Button
+        className="btn-icon btn-neutral back-arrow-btn"
+        color="default"
+        size="sm"
+        onClick={() => history.goBack()}
+        style={{
+          position: "fixed",
+          top: "20px",
+          left: "20px",
+          zIndex: "1050",
+          backgroundColor: "rgba(255, 255, 255, 0.9)",
+          border: "1px solid rgba(0, 0, 0, 0.1)",
+          borderRadius: "50%",
+          width: "45px",
+          height: "45px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+      >
+        <i className="now-ui-icons arrows-1_minimal-left" style={{ fontSize: "16px", color: "#333" }}></i>
+      </Button>      
       <div className="page-header header-filter" filter-color="blue">
         <div
           className="page-header-image"
@@ -56,7 +77,7 @@ function LoginPage() {
                         <img
                           alt="..."
                           src={require("assets/img/now-logo.png")}
-                        ></img>
+                        ></img>                       
                       </div>
                     </CardHeader>
                     <CardBody>
@@ -72,7 +93,7 @@ function LoginPage() {
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
-                          placeholder="First Name..."
+                          placeholder="User Name ..."
                           type="text"
                           onFocus={() => setFirstFocus(true)}
                           onBlur={() => setFirstFocus(false)}
@@ -81,19 +102,19 @@ function LoginPage() {
                       <InputGroup
                         className={
                           "no-border input-lg" +
-                          (lastFocus ? " input-group-focus" : "")
+                          (passwordFocus ? " input-group-focus" : "")
                         }
                       >
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>
-                            <i className="now-ui-icons text_caps-small"></i>
+                            <i className="now-ui-icons  ui-1_lock-circle-open"></i>
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
-                          placeholder="Last Name..."
+                          placeholder="Password..."
                           type="text"
-                          onFocus={() => setLastFocus(true)}
-                          onBlur={() => setLastFocus(false)}
+                          onFocus={() => setPasswordFocus(true)}
+                          onBlur={() => setPasswordFocus(false)}
                         ></Input>
                       </InputGroup>
                     </CardBody>
@@ -109,6 +130,7 @@ function LoginPage() {
                         Get Started
                       </Button>
                     </CardFooter>
+                    <br/><br/>
                     <div className="pull-left">
                       <h6>
                         <a
@@ -136,8 +158,7 @@ function LoginPage() {
               </Col>
             </Row>
           </Container>
-        </div>
-        <Footer />
+        </div>        
       </div>
     </>
   );
