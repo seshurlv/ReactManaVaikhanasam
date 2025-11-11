@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import ReactPlayer from "react-player";
 import video02 from "../../assets/videos/News/VYF KartheekaVanasamaradhana Invitation.mp4";
 
@@ -12,6 +13,7 @@ import {
 } from "reactstrap";
 
 function News() {
+  const { t } = useTranslation();
   return (
     <>
       <div className="cd-section" id="news">
@@ -19,7 +21,7 @@ function News() {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="10">
-                <h2 className="title">Latest News</h2>
+                <h2 className="title">{t('news.title')}</h2>
                 <br></br>
                 <Card className="card-plain card-blog">
                   <Row>

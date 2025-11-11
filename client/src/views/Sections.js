@@ -26,7 +26,7 @@ import Directory from "./sections-sections/Directory.js";
 import Matrimony from "./sections-sections/Matrimony.js";
 import Purohitas from "./sections-sections/Purohitas.js";
 import News from "./sections-sections/News.js";
-import Contact from "./sections-sections/Contact.js";
+import Contact from "./sections-sections/ContactUs.js";
 import Svmm from "./sections-sections/Svmm.js";
 import SvmmMembers from "./sections-sections/SvmmMembers.js";
 import Documents from "./sections-sections/Documents.js";

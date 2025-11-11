@@ -1,5 +1,6 @@
 /*eslint-disable*/
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 // reactstrap components
 import { Container } from "reactstrap";
@@ -7,6 +8,7 @@ import { Container } from "reactstrap";
 // core components
 
 function FooterDefault() {
+  const { t } = useTranslation();
   return (
     <>
       <footer className="footer footer-default">
@@ -18,10 +20,10 @@ function FooterDefault() {
                   href="https://www.creative-tim.com?ref=nuk-pro-react-footer-default"
                   target="_blank"
                 >
-                  Creative Tim
+                  {t('homePage.title')}
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="http://presentation.creative-tim.com?ref=nuk-pro-react-footer-default"
                   target="_blank"
@@ -36,24 +38,11 @@ function FooterDefault() {
                 >
                   Blog
                 </a>
-              </li>
+              </li> */}
             </ul>
           </nav>
           <div className="copyright" id="copyright">
-            © {new Date().getFullYear()}, Designed by{" "}
-            <a
-              href="https://www.invisionapp.com?ref=creativetim"
-              target="_blank"
-            >
-              Invision
-            </a>
-            . Coded by{" "}
-            <a
-              href="https://www.creative-tim.com?ref=nuk-pro-react-footer-default"
-              target="_blank"
-            >
-              Creative Tim
-            </a>
+            © {new Date().getFullYear()}, {t('contact.work')} {t('contact.name')}
             .
           </div>
         </Container>

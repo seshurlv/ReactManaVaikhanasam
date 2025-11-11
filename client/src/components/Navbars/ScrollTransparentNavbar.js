@@ -128,11 +128,11 @@ function ScrollTransparentNavbar() {
                   <p>{t('nav.ashramam')}</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
-                  <DropdownItem to="/sections#ashramam" tag={Link}>
+                  <DropdownItem to="/ashramam" tag={Link}>
                     <i className="now-ui-icons shopping_box"></i>
                      {t('nav.hyderabadAshramam')}
                   </DropdownItem>
-                  <DropdownItem to="/sections#ashramamdonors" tag={Link}>
+                  <DropdownItem to="/ashramamdonors" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     {t('nav.hyderabadAshramamDonors')}
                   </DropdownItem>
@@ -155,11 +155,11 @@ function ScrollTransparentNavbar() {
                   <p>{t('nav.gallery')}</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
-                  <DropdownItem to="/sections#photogallery" tag={Link}>
+                  <DropdownItem to="/photogallery" tag={Link}>
                     <i className="now-ui-icons shopping_box"></i>
                     {t('nav.photos')}
                   </DropdownItem>
-                  <DropdownItem to="/sections#videogallery" tag={Link}>
+                  <DropdownItem to="/videogallery" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     {t('nav.videos')}
                   </DropdownItem>
@@ -182,23 +182,23 @@ function ScrollTransparentNavbar() {
                   <p>{t('nav.services')}</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
-                  <DropdownItem to="/sections#directory" tag={Link}>
+                  <DropdownItem to="/directory" tag={Link}>
                     <i className="now-ui-icons shopping_box"></i>
                     {t('nav.directory')}
                   </DropdownItem>
-                  <DropdownItem to="/sections#matrimony" tag={Link}>
+                  <DropdownItem to="/matrimony" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     {t('nav.matrimony')}
                   </DropdownItem>
-                  <DropdownItem to="/sections#purohitas" tag={Link}>
+                  <DropdownItem to="/purohit" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     {t('nav.vaikhanasaPurohitulu')}
                   </DropdownItem>
-                  <DropdownItem to="/sections#vaikhanasaprabha" tag={Link}>
+                  <DropdownItem to="/vaikhanasaprabha" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     {t('nav.vaikhanasaPrabha')}
                   </DropdownItem>
-                  <DropdownItem to="/sections#books" tag={Link}>
+                  <DropdownItem to="/books" tag={Link}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
                     {t('nav.books')}
                   </DropdownItem>
@@ -232,7 +232,7 @@ function ScrollTransparentNavbar() {
                   <p>{t('nav.download')}</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
-                  <DropdownItem to="/sections#documents" tag={Link}>
+                  <DropdownItem to="/documents" tag={Link}>
                     <i className="now-ui-icons shopping_box"></i>
                     {t('nav.documents')}
                   </DropdownItem>
@@ -269,16 +269,12 @@ function ScrollTransparentNavbar() {
                 </DropdownToggle>
                   <DropdownMenu>
                     <DropdownItem header>
-                    <strong>{t('nav.svmm')}</strong>
-                  </DropdownItem>
-                  <DropdownItem to="/sections#svmm" tag={Link}>
-                    <i className="now-ui-icons shopping_box"></i>
-                    {t('nav.sriVaikhanasaMahaMandali')}
-                  </DropdownItem>
-                  <DropdownItem to="/sections#svmmmembers" tag={Link}>
-                    <i className="now-ui-icons ui-2_settings-90"></i>
-                    {t('nav.svmmWorkingCommittee')}
-                  </DropdownItem>
+                      <strong>{t('nav.svmm')}</strong>
+                    </DropdownItem>
+                    <DropdownItem to="/svmm" tag={Link}>
+                      <i className="now-ui-icons shopping_box"></i>
+                      {t('nav.sriVaikhanasaMahaMandali')}
+                    </DropdownItem>                  
                   </DropdownMenu>                
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
@@ -286,7 +282,7 @@ function ScrollTransparentNavbar() {
                     caret                                   
                     id="navbarDropdownMenuLink"
                     nav      
-                    to="/sections#news"            
+                    to="/news"            
                     tag={Link}                    
                   >
                     <i
@@ -302,7 +298,7 @@ function ScrollTransparentNavbar() {
                   color="default"                                    
                   id="navbarDropdownMenuLink"
                   nav
-                  to="/sections#contact"            
+                  to="/contact"            
                   tag={Link}                  
                 >
                   <i
@@ -437,6 +433,35 @@ function ScrollTransparentNavbar() {
                   <p>Buy Now</p>
                 </Button>
               </NavItem> */}
+              {/* <UncontrolledDropdown nav>
+                <DropdownToggle
+                  caret
+                  color="default"
+                  data-toggle="dropdown"
+                  href="#pablo"
+                  id="navbarDropdownMenuLink"
+                  nav
+                  onClick={(e) => e.preventDefault()}
+                >
+                  <i className="now-ui-icons users_circle-08"></i>
+                  <p>{t('nav.account')}</p>
+                </DropdownToggle>
+                <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
+                  <DropdownItem to="/loginpage" tag={Link}>
+                    <i className="now-ui-icons ui-1_lock-circle-open"></i>
+                    {t('nav.login')}
+                  </DropdownItem>
+                  <DropdownItem to="/sign-up" tag={Link}>
+                    <i className="now-ui-icons users_single-02"></i>
+                    {t('nav.signUp')}
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem to="/profile-page" tag={Link}>
+                    <i className="now-ui-icons business_badge"></i>
+                    {t('nav.profile')}
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown> */}
               <NavItem>
                 <LanguageSwitcher />
               </NavItem>

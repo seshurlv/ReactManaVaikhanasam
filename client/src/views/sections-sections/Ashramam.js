@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect, useRef } from "react";
 import { useTranslation } from 'react-i18next';
 import proposed from "assets/img/hyderabad-ashramam/proposed.jpg";  
 
@@ -15,6 +15,9 @@ import {
 
 function Ashramam() {
   const { t } = useTranslation();
+  const sectionRef = useRef(null);
+  const [imagesLoaded, setImagesLoaded] = useState(0);
+  const [videosLoaded, setVideosLoaded] = useState(0);
 
   // First floor construction media files
   const firstFloorImages = [
@@ -32,6 +35,58 @@ function Ashramam() {
     "assets/siteimg/ashramam/firstfloor/01.mp4",
     "assets/siteimg/ashramam/firstfloor/02.mp4"
   ];
+
+  // Handle image load
+  const handleImageLoad = () => {
+    setImagesLoaded(prev => prev + 1);
+  };
+
+  // Handle video load
+  const handleVideoLoad = () => {
+    setVideosLoaded(prev => prev + 1);
+  };
+
+  // Scroll adjustment after content loads
+  useEffect(() => {
+    const totalMedia = firstFloorImages.length + firstFloorVideos.length + 1; // +1 for proposed image
+    const loadedMedia = imagesLoaded + videosLoaded;
+    
+    // When most content is loaded, adjust scroll position
+    if (loadedMedia >= totalMedia * 0.8) {
+      const hash = window.location.hash;
+      if (hash === '#ashramam' && sectionRef.current) {
+        setTimeout(() => {
+          sectionRef.current.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+          });
+        }, 100);
+      }
+    }
+  }, [imagesLoaded, videosLoaded, firstFloorImages.length, firstFloorVideos.length]);
+
+  // Intersection observer for better scroll handling
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Update URL hash when section is in view
+            if (window.location.hash !== '#ashramam') {
+              window.history.replaceState(null, null, '#ashramam');
+            }
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '-100px 0px' }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
@@ -83,14 +138,13 @@ function Ashramam() {
                                         height: '200px',
                                         objectFit: 'cover'
                                       }}
+                                      onLoad={handleImageLoad}
                                       onError={(e) => {
                                         e.target.style.display = 'none';
+                                        handleImageLoad(); // Count failed loads too
                                       }}
                                     />
-                                  </div>
-                                  <p className="text-center mt-2 small text-muted">
-                                    Construction Phase {index + 1}
-                                  </p>
+                                  </div>                                  
                                 </Col>
                               ))}
                             </Row>
@@ -123,17 +177,16 @@ function Ashramam() {
                                         height: '250px',
                                         objectFit: 'cover'
                                       }}
+                                      onLoadedData={handleVideoLoad}
                                       onError={(e) => {
                                         e.target.style.display = 'none';
+                                        handleVideoLoad(); // Count failed loads too
                                       }}
                                     >
                                       <source src={videoSrc} type="video/mp4" />
                                       Your browser does not support the video tag.
                                     </video>
-                                  </div>
-                                  <p className="text-center mt-2 small text-muted">
-                                    Construction Video {index + 1}
-                                  </p>
+                                  </div>                                  
                                 </Col>
                               ))}
                             </Row>
@@ -151,6 +204,8 @@ function Ashramam() {
                           alt={t('ashramam.imageAlt')}
                           className="img img-raised rounded"
                           src={proposed}
+                          onLoad={handleImageLoad}
+                          onError={handleImageLoad}
                         ></img>
                       </div>
                     </Col>

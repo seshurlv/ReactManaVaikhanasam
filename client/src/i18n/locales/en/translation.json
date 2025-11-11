@@ -31,7 +31,11 @@
     "svmmWorkingCommittee": "SVMM Working Committee",
     "contactUs": "Contact Us",
     "hyderabadAshramam": "Hyderabad Ashramam",
-    "hyderabadAshramamDonors": "Hyderabad Ashramam Donors"
+    "hyderabadAshramamDonors": "Hyderabad Ashramam Donors",
+    "account": "Account",
+    "login": "Login",
+    "signUp": "Sign Up",
+    "profile": "Profile"
   },
   "photoGallery": {
     "title": "Photo Gallery",
@@ -200,5 +204,22 @@
       "poojaVidhanam": "Vaikhanasa Pooja Vidhanam",
       "vaikhanasaluAnte": "Vaikhanasalu Ante Evaru By Rompicherla Yogananda Acharyulu"
     }
+  },
+  "news": {
+    "title": "Latest News",
+    "description": "Latest news and updates related to Vaikhanasa community."
+  },
+  "contact":{
+    "fullname": "Rompicherla Lakshmi Venkata Seshu Kumar",
+    "name": "Seshu Rompicherla",
+    "work": "Designed & Coded by",
+    "des1": "My sincere effort is to serve the Vaikhanasa community by creating a platform where everyone can stay informed, connected, and engaged.",
+    "des2": "I humbly seek your support in sharing meaningful news, updates, and resources that can benefit Vaikhanasas across the world. Together, let’s build a stronger and more united community.",
+    "des3": "I welcome your feedback, suggestions, and contributions to make this platform better."
+  },
+  "matrimony":{
+    "title": "Vaikhanasa Matrimony",
+    "description": "Sri Vaikhanasa Maha Mandali Vivaha Paricheya Vedika Matrimony Service.",
+    "info": "This service is provided to help our Vaikhanasa community to find suitable life partners within our community. Please download the application form from the Documents section, fill it out with accurate details, and send it to the email address provided below."
   }
 }

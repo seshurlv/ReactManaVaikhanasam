@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import ReactDataGrid from "@inovua/reactdatagrid-community";
 import "@inovua/reactdatagrid-community/index.css";
 
@@ -791,6 +792,7 @@ const aparamList = [
 ];
 
 function Purohitas() {
+  const { t } = useTranslation();
   return (
     <>
       <div className="cd-section" id="purohitas">
@@ -816,7 +818,7 @@ function Purohitas() {
             </Row>*/}
             <Row>
               <Col className="ml-auto mr-auto text-center" md="12">
-                <h2 className="title">Vaikhanasa Purohitulu</h2>                
+                <h2 className="title">{t('nav.vaikhanasaPurohitulu')}</h2>
                 <h4>Following are vaikhanasa purohits who perform aparam :</h4>
                 <ReactDataGrid
                   idProperty="id"

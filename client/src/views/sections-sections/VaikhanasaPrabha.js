@@ -1,10 +1,12 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 // reactstrap components
 import { Container, Row, Col } from "reactstrap";
 
 // core components
 function VaikhanasaPrabha() {
+  const { t } = useTranslation();
   return (
     <>
       <div className="cd-section" id="vaikhanasaprabha">
@@ -12,7 +14,7 @@ function VaikhanasaPrabha() {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="12">
-                <h2 className="title">Vaikhanasa Prabha</h2>                
+                <h2 className="title">{t('nav.vaikhanasaPrabha')}</h2>                
               </Col>
             </Row>
             <Row>
