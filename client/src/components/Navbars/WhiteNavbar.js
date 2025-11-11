@@ -186,14 +186,17 @@ function WhiteNavbar() {
                     aria-hidden={true}
                     className="now-ui-icons files_paper"
                   ></i>
-                  <p>{t('nav.download')}</p>
+                  <p>{t('nav.welfare')}</p>
                 </DropdownToggle>
-                <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
-                  <DropdownItem to="/documents" tag={Link} >
-                    <i className="now-ui-icons shopping_box"></i>
-                    {t('nav.documents')}
-                  </DropdownItem>
-                </DropdownMenu>
+                  <DropdownMenu>
+                    <DropdownItem header>
+                      <strong>{t('nav.svmm')}</strong>
+                    </DropdownItem>
+                    <DropdownItem to="/svmm" tag={Link} >
+                      <i className="now-ui-icons shopping_box"></i>
+                        {t('nav.sriVaikhanasaMahaMandali')}
+                    </DropdownItem>                    
+                  </DropdownMenu>                                  
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
                 <DropdownToggle
@@ -209,18 +212,15 @@ function WhiteNavbar() {
                     aria-hidden={true}
                     className="now-ui-icons files_paper"
                   ></i>
-                  <p>{t('nav.welfare')}</p>
+                  <p>{t('nav.library')}</p>
                 </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem header>
-                      <strong>{t('nav.svmm')}</strong>
-                    </DropdownItem>
-                    <DropdownItem to="/svmm" tag={Link} >
-                      <i className="now-ui-icons shopping_box"></i>
-                        {t('nav.sriVaikhanasaMahaMandali')}
-                    </DropdownItem>                    
-                  </DropdownMenu>                                  
-              </UncontrolledDropdown>
+                <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
+                  <DropdownItem to="/documents" tag={Link} >
+                    <i className="now-ui-icons shopping_box"></i>
+                    {t('nav.documents')}
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>              
               <UncontrolledDropdown nav>
                 <DropdownToggle
                   caret       

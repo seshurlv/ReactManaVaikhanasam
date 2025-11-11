@@ -222,6 +222,32 @@ function ScrollTransparentNavbar() {
                   data-toggle="dropdown"
                   href="#pablo"
                   id="navbarDropdownMenuLink"
+                  nav                  
+                  onClick={(e) => e.preventDefault()}
+                >
+                  <i
+                    aria-hidden={true}
+                    className="now-ui-icons files_paper"
+                  ></i>
+                  <p>{t('nav.welfare')}</p>
+                </DropdownToggle>
+                  <DropdownMenu>
+                    <DropdownItem header>
+                      <strong>{t('nav.svmm')}</strong>
+                    </DropdownItem>
+                    <DropdownItem to="/svmm" tag={Link}>
+                      <i className="now-ui-icons shopping_box"></i>
+                      {t('nav.sriVaikhanasaMahaMandali')}
+                    </DropdownItem>                  
+                  </DropdownMenu>                
+              </UncontrolledDropdown>
+              <UncontrolledDropdown nav>
+                <DropdownToggle
+                  caret
+                  color="default"
+                  data-toggle="dropdown"
+                  href="#pablo"
+                  id="navbarDropdownMenuLink"
                   nav
                   onClick={(e) => e.preventDefault()}
                 >
@@ -229,7 +255,7 @@ function ScrollTransparentNavbar() {
                     aria-hidden={true}
                     className="now-ui-icons files_paper"
                   ></i>
-                  <p>{t('nav.download')}</p>
+                  <p>{t('nav.library')}</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
                   <DropdownItem to="/documents" tag={Link}>
@@ -251,32 +277,7 @@ function ScrollTransparentNavbar() {
                   </DropdownItem> */}
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <UncontrolledDropdown nav>
-                <DropdownToggle
-                  caret
-                  color="default"
-                  data-toggle="dropdown"
-                  href="#pablo"
-                  id="navbarDropdownMenuLink"
-                  nav                  
-                  onClick={(e) => e.preventDefault()}
-                >
-                  <i
-                    aria-hidden={true}
-                    className="now-ui-icons files_paper"
-                  ></i>
-                  <p>{t('nav.welfare')}</p>
-                </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem header>
-                      <strong>{t('nav.svmm')}</strong>
-                    </DropdownItem>
-                    <DropdownItem to="/svmm" tag={Link}>
-                      <i className="now-ui-icons shopping_box"></i>
-                      {t('nav.sriVaikhanasaMahaMandali')}
-                    </DropdownItem>                  
-                  </DropdownMenu>                
-              </UncontrolledDropdown>
+              
               <UncontrolledDropdown nav>
                 <DropdownToggle
                     caret                                   
@@ -337,27 +338,11 @@ function ScrollTransparentNavbar() {
                   <DropdownItem to="/sections#blogs" tag={Link}>
                     <i className="now-ui-icons text_align-left"></i>
                     Blogs
-                  </DropdownItem>
-                  <DropdownItem to="/sections#teams" tag={Link}>
-                    <i className="now-ui-icons sport_user-run"></i>
-                    Teams
-                  </DropdownItem>
-                  <DropdownItem to="/sections#projects" tag={Link}>
-                    <i className="now-ui-icons education_paper"></i>
-                    Projects
-                  </DropdownItem>
-                  <DropdownItem to="/sections#pricing" tag={Link}>
-                    <i className="now-ui-icons business_money-coins"></i>
-                    Pricing
-                  </DropdownItem>
+                  </DropdownItem>                  
                   <DropdownItem to="/sections#testimonials" tag={Link}>
                     <i className="now-ui-icons ui-2_chat-round"></i>
                     Testimonials
-                  </DropdownItem>
-                  <DropdownItem to="/sections#contact-us" tag={Link}>
-                    <i className="now-ui-icons tech_mobile"></i>
-                    Contact Us
-                  </DropdownItem>
+                  </DropdownItem>                  
                 </DropdownMenu>
               </UncontrolledDropdown>
               <UncontrolledDropdown nav>
@@ -388,31 +373,11 @@ function ScrollTransparentNavbar() {
                   <DropdownItem tag={Link} to="/blog-posts">
                     <i className="now-ui-icons design_bullet-list-67"></i>
                     Blog Posts
-                  </DropdownItem>
-                  <DropdownItem tag={Link} to="/contact-us">
-                    <i className="now-ui-icons location_pin"></i>
-                    Contact Us
-                  </DropdownItem>
-                  <DropdownItem tag={Link} to="/landing-page">
-                    <i className="now-ui-icons education_paper"></i>
-                    Landing Page
-                  </DropdownItem>
+                  </DropdownItem>                                    
                   <DropdownItem tag={Link} to="/login-page">
                     <i className="now-ui-icons users_circle-08"></i>
                     Login Page
-                  </DropdownItem>
-                  <DropdownItem tag={Link} to="/pricing">
-                    <i className="now-ui-icons business_money-coins"></i>
-                    Pricing
-                  </DropdownItem>
-                  <DropdownItem tag={Link} to="/e-commerce">
-                    <i className="now-ui-icons shopping_shop"></i>
-                    Ecommerce Page
-                  </DropdownItem>
-                  <DropdownItem tag={Link} to="/product-page">
-                    <i className="now-ui-icons shopping_bag-16"></i>
-                    Product Page
-                  </DropdownItem>
+                  </DropdownItem>                                                      
                   <DropdownItem tag={Link} to="/profile-page">
                     <i className="now-ui-icons users_single-02"></i>
                     Profile Page

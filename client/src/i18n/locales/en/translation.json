@@ -35,7 +35,8 @@
     "account": "Account",
     "login": "Login",
     "signUp": "Sign Up",
-    "profile": "Profile"
+    "profile": "Profile",
+    "library": "Library"
   },
   "photoGallery": {
     "title": "Photo Gallery",

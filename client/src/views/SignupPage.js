@@ -70,7 +70,7 @@ function SignupPage() {
   // const [mobileFocus, setMobileFocus] = React.useState(false);
   // const [emailFocus, setEmailFocus] = React.useState(false);
   // const [addressFocus, setAddressFocus] = React.useState(false);
-   const [mobile, setMobile] = React.useState("");
+  // const [mobile, setMobile] = React.useState("");
 
   // Focus states for input styling
   const [focusStates, setFocusStates] = React.useState({
@@ -306,14 +306,14 @@ function SignupPage() {
     setTouched({});
   };
 
-  const handleMobileChange = (e) => {
-    // Remove all non-digit characters
-    const value = e.target.value.replace(/\D/g, '');
-    // Limit length to 10 digits
-    if (value.length <= 10) {
-      setMobile(value);
-    }
-  };
+  // const handleMobileChange = (e) => {
+  //   // Remove all non-digit characters
+  //   const value = e.target.value.replace(/\D/g, '');
+  //   // Limit length to 10 digits
+  //   if (value.length <= 10) {
+  //     setMobile(value);
+  //   }
+  // };
 
   return (
     <>      
