@@ -38,11 +38,9 @@ function Svmm() {
                 <Card className="card-plain card-blog title">                  
                   <Row>
                     <Col className="ml-auto mr-auto text-center" md="12">
-                      <div>                     
-                        <p>
-                          <h4>{t('svmm.firstPresident')}</h4>
-                          <h3>{t('svmm.presidentName')}</h3>
-                        </p>
+                      <div>                                             
+                        <h4>{t('svmm.firstPresident')}</h4>
+                        <h3>{t('svmm.presidentName')}</h3>                        
                       </div>
                       <div className="card-image">
                         <img

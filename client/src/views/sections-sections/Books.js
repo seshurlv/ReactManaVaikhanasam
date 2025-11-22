@@ -28,7 +28,8 @@ function Books() {
                 <br/>
                 <Col md="12">
                   <div>
-                    <object aria-label="Book preview: Sri Priya Books Centre PDF" data={"/assets/docs/sri-priya-books-centre.pdf"} type="application/pdf" width="100%" height="900px" />                                          
+                    {/* <object aria-label="Book preview: Sri Priya Books Centre PDF" data={"/assets/docs/sri-priya-books-centre.pdf"} type="application/pdf" width="100%" height="900px" /> */}
+                    <iframe src="/assets/docs/sri-priya-books-centre.pdf" width="100%" height="900px" allowfullscreen="true" title="Book preview: Sri Priya Books Centre PDF"></iframe>
                   </div>
                 </Col>
               </Col>

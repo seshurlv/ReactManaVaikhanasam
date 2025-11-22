@@ -49,9 +49,9 @@ function Documents() {
                             {downloadApplicationsItemList.map((item, index) => (
 
                                 <tr key={index}>                                
-                                    <td class='dataColumnStyle textCenter'>{item.SNO}</td>  
-                                    <td class='dataColumnStyle'>{item.NAME}</td>
-                                    <td class='dataColumnStyle textCenter tdDownloadImageColumn'><a class='cursorPointer' href={item.FILEURL} download><img alt="" src={item.IMGURL}/></a></td>
+                                    <td className='dataColumnStyle textCenter'>{item.SNO}</td>  
+                                    <td className='dataColumnStyle'>{item.NAME}</td>
+                                    <td className='dataColumnStyle textCenter tdDownloadImageColumn'><a className='cursorPointer' href={item.FILEURL} download><img alt="" src={item.IMGURL}/></a></td>
                                 </tr>
                             ))}
                         </tbody>
@@ -71,9 +71,9 @@ function Documents() {
                         <tbody>
                             {downloadBooksList.map((item, index) => (
                                 <tr key={index}>                                
-                                    <td class='dataColumnStyle textCenter'>{item.SNO}</td>  
-                                    <td class='dataColumnStyle'>{item.NAME}</td>
-                                    <td class='dataColumnStyle textCenter tdDownloadImageColumn'><a class='cursorPointer' href={item.FILEURL} download><img alt="" src={item.IMGURL}/></a></td>
+                                    <td className='dataColumnStyle textCenter'>{item.SNO}</td>  
+                                    <td className='dataColumnStyle'>{item.NAME}</td>
+                                    <td className='dataColumnStyle textCenter tdDownloadImageColumn'><a className='cursorPointer' href={item.FILEURL} download><img alt="" src={item.IMGURL}/></a></td>
                                 </tr>
                             ))}
                         </tbody>

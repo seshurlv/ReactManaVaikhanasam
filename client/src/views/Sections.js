@@ -18,20 +18,20 @@ import WhiteNavbar from "components/Navbars/WhiteNavbar.js";
 // import Pricing from "./sections-sections/Pricing.js";
 // import Testimonials from "./sections-sections/Testimonials.js";
 //import ContactUs from "./sections-sections/ContactUs.js";
-import Ashramam from "./sections-sections/Ashramam.js";
-import AshramamDonors from "./sections-sections/AshramamDonors.js";
-import PhotoGallery from "./sections-sections/PhotoGallery.js";
-import VideoGallery from "./sections-sections/VideoGallery.js";
-import Directory from "./sections-sections/Directory.js";
-import Matrimony from "./sections-sections/Matrimony.js";
-import Purohitas from "./sections-sections/Purohitas.js";
-import News from "./sections-sections/News.js";
-import Contact from "./sections-sections/ContactUs.js";
-import Svmm from "./sections-sections/Svmm.js";
-import SvmmMembers from "./sections-sections/SvmmMembers.js";
-import Documents from "./sections-sections/Documents.js";
-import Books from "./sections-sections/Books.js";
-import VaikhanasaPrabha from "./sections-sections/VaikhanasaPrabha.js";
+// import Ashramam from "./sections-sections/Ashramam.js";
+// import AshramamDonors from "./sections-sections/AshramamDonors.js";
+// import PhotoGallery from "./sections-sections/PhotoGallery.js";
+// import VideoGallery from "./sections-sections/VideoGallery.js";
+// import Directory from "./sections-sections/Directory.js";
+// import Matrimony from "./sections-sections/Matrimony.js";
+// import Purohitas from "./sections-sections/Purohitas.js";
+// import News from "./sections-sections/News.js";
+// import Contact from "./sections-sections/ContactUs.js";
+// import Svmm from "./sections-sections/Svmm.js";
+// import SvmmMembers from "./sections-sections/SvmmMembers.js";
+// import Documents from "./sections-sections/Documents.js";
+// import Books from "./sections-sections/Books.js";
+// import VaikhanasaPrabha from "./sections-sections/VaikhanasaPrabha.js";
 
 function Sections() {
   React.useEffect(() => {
@@ -69,7 +69,7 @@ function Sections() {
       <WhiteNavbar />
       <div className="wrapper">
         <div className="section-space"></div>        
-        <News />
+        {/* <News />
         <Ashramam />
         <AshramamDonors />
         <Svmm />
@@ -82,7 +82,7 @@ function Sections() {
         <Books />                 
         <VideoGallery />
         <PhotoGallery />
-        <Contact />
+        <Contact /> */}
       </div>
     </>
   );
