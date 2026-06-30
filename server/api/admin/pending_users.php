@@ -22,7 +22,7 @@ verifyAdminToken();
 $conn = getDBConnection();
 
 $stmt = $conn->prepare(
-    "SELECT id, full_name, gotram, phone, email, username, created_at
+    "SELECT id, full_name, gotram, phone, email, address, created_at
      FROM users
      WHERE status = 'pending'
      ORDER BY created_at DESC"

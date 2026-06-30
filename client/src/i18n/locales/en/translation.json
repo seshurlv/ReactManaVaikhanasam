@@ -36,6 +36,7 @@
     "login": "Login",
     "signUp": "Sign Up",
     "logout": "Logout",
+    "pendingApprovals": "Pending Approvals",
     "profile": "Profile",
     "library": "Library"
   },

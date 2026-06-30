@@ -33,7 +33,7 @@ if (empty($reason)) {
 $conn = getDBConnection();
 
 $stmt = $conn->prepare(
-    "UPDATE users SET status = 'rejected', reject_reason = ? WHERE id = ? AND status = 'pending'"
+    "UPDATE users SET status = 'rejected', rejection_reason = ? WHERE id = ? AND status = 'pending'"
 );
 $stmt->bind_param("si", $reason, $user_id);
 $stmt->execute();

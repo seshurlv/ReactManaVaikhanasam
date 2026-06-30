@@ -20,6 +20,7 @@ import Presentation from "views/Presentation.js";
 import Sections from "views/Sections.js"; // Add this missing import
 import LoginPage from "views/LoginPage.js";
 import SignupPage from "views/SignupPage";
+import PendingUsersPage from "views/pages/PendingUsersPage";
 
 // Lazy loaded pages
 import { 
@@ -67,7 +68,8 @@ root.render(
       
 
       <Route path="/loginPage" component={LoginPage} />
-      <Route path="/signupPage" component={SignupPage} />      
+      <Route path="/signupPage" component={SignupPage} />
+      <Route path="/admin/pending-users" component={PendingUsersPage} />      
 
       {/* Catch all route - must be last */}
       <Route path="*" component={Presentation} />

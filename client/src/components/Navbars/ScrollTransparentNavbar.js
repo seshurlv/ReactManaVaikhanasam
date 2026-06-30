@@ -343,6 +343,13 @@ function ScrollTransparentNavbar() {
                         </DropdownItem>
                       )}
                       <DropdownItem divider />
+                      {isAdmin && (
+                        <DropdownItem to="/admin/pending-users" tag={Link}>
+                          <i className="now-ui-icons ui-1_bell-53" />
+                          {t('nav.pendingApprovals')}
+                        </DropdownItem>
+                      )}
+                      <DropdownItem divider />
                       <DropdownItem
                         onClick={() => {
                           logout();
