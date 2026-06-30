@@ -35,6 +35,7 @@
     "account": "Account",
     "login": "Login",
     "signUp": "Sign Up",
+    "logout": "Logout",
     "profile": "Profile",
     "library": "Library"
   },

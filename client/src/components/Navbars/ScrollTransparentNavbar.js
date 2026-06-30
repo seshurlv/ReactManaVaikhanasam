@@ -1,7 +1,8 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher.js";
+import { useAuth } from "context/AuthContext";
 
 // reactstrap components
 import {
@@ -21,8 +22,10 @@ import {
 
 function ScrollTransparentNavbar() {  
   const [collapseOpen, setCollapseOpen] = React.useState(false);
-   const { t } = useTranslation();
+  const { t } = useTranslation();
   const location = useLocation();
+  const history = useHistory();
+  const { isLoggedIn, isAdmin, auth, logout } = useAuth();
 
   const [navbarColor, setNavbarColor] = React.useState(
     (document.documentElement.scrollTop > 499 || document.body.scrollTop) > 499
@@ -309,7 +312,62 @@ function ScrollTransparentNavbar() {
                   <p>{t('nav.contactUs')}</p>
                 </DropdownToggle>                
               </UncontrolledDropdown>
-              
+              {/* Account dropdown - shows login/register when logged out, profile/logout when logged in */}
+              <UncontrolledDropdown nav>
+                <DropdownToggle
+                  caret
+                  color="default"
+                  nav
+                  id="navbarAccountLink"
+                >
+                  <i className="now-ui-icons users_circle-08" />
+                  <p>
+                    {isLoggedIn
+                      ? (isAdmin ? `Admin: ${auth.username || auth.name}` : auth.name)
+                      : t('nav.account')}
+                  </p>
+                </DropdownToggle>
+                <DropdownMenu right>
+                  {isLoggedIn ? (
+                    <>
+                      {isAdmin && (
+                        <DropdownItem disabled>
+                          <i className="now-ui-icons ui-1_settings-gear-63" />
+                          {`Admin: ${auth.username || auth.name}`}
+                        </DropdownItem>
+                      )}
+                      {!isAdmin && (
+                        <DropdownItem disabled>
+                          <i className="now-ui-icons users_circle-08" />
+                          {auth.name}
+                        </DropdownItem>
+                      )}
+                      <DropdownItem divider />
+                      <DropdownItem
+                        onClick={() => {
+                          logout();
+                          history.push("/");
+                        }}
+                        style={{ cursor: "pointer" }}
+                      >
+                        <i className="now-ui-icons media-1_button-power" />
+                        {t('nav.logout')}
+                      </DropdownItem>
+                    </>
+                  ) : (
+                    <>
+                      <DropdownItem to="/loginPage" tag={Link}>
+                        <i className="now-ui-icons ui-1_lock-circle-open" />
+                        {t('nav.login')}
+                      </DropdownItem>
+                      <DropdownItem to="/signupPage" tag={Link}>
+                        <i className="now-ui-icons users_single-02" />
+                        {t('nav.signUp')}
+                      </DropdownItem>
+                    </>
+                  )}
+                </DropdownMenu>
+              </UncontrolledDropdown>
               { /*<UncontrolledDropdown nav>
                 <DropdownToggle
                   caret

@@ -255,6 +255,28 @@ function WhiteNavbar() {
                   <p>{t('nav.contactUs')}</p>
                 </DropdownToggle>                
               </UncontrolledDropdown>
+              {/* Account dropdown - login / register */}
+              <UncontrolledDropdown nav>
+                <DropdownToggle
+                  caret
+                  color="default"
+                  nav
+                  id="navbarAccountLink"
+                >
+                  <i className="now-ui-icons users_circle-08" />
+                  <p>{t('nav.account')}</p>
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem to="/loginPage" tag={Link}>
+                    <i className="now-ui-icons ui-1_lock-circle-open" />
+                    {t('nav.login')}
+                  </DropdownItem>
+                  <DropdownItem to="/signupPage" tag={Link}>
+                    <i className="now-ui-icons users_single-02" />
+                    {t('nav.signUp')}
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
               {/* <UncontrolledDropdown nav>
                 <DropdownToggle
                   caret

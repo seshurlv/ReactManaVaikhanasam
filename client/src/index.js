@@ -5,6 +5,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // i18n initialization
 import './i18n/i18n';
 
+// Auth context
+import { AuthProvider } from "context/AuthContext";
+
 // styles
 import "assets/css/bootstrap.min.css";
 import "assets/scss/now-ui-kit.scss";
@@ -41,8 +44,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 const CACHE_VERSION = process.env.REACT_APP_VERSION || '1.3.0';
 
 root.render(
-  <Router>
-    <Switch>   
+  <AuthProvider>
+    <Router>
+      <Switch>   
       <Route exact path="/" component={Presentation} />   
       <Route path="/presentation" component={Presentation} />
       <Route path="/sections" component={Sections} />    
@@ -69,6 +73,7 @@ root.render(
       <Route path="*" component={Presentation} />
     </Switch>
   </Router>
+  </AuthProvider>
 );
 
 // Register service worker
